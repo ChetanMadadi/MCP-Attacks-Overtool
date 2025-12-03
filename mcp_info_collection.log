@@ -1,0 +1,1684 @@
+2025-11-30 21:01:38,661 - INFO - Loaded 28 local server configurations
+2025-11-30 21:01:38,661 - INFO - Loaded 5 API keys
+2025-11-30 21:01:38,661 - INFO - Starting MCP server information collection in INDIVIDUAL mode...
+2025-11-30 21:01:38,661 - INFO - Added Node.js path to environment: /Users/zhenting.wang/.nvm/versions/node/v22.16.0/bin
+2025-11-30 21:01:38,661 - INFO - Loading local server configurations...
+2025-11-30 21:01:38,661 - INFO - Loaded 28 server configurations
+2025-11-30 21:01:38,661 - INFO - Starting batch 1/6
+2025-11-30 21:01:38,661 - INFO - Processing batch 1 with 5 servers in INDIVIDUAL mode...
+2025-11-30 21:01:38,661 - INFO -    Servers in this batch: OpenAPI Explorer, Unit Converter, Wikipedia, Google Maps, Bibliomantic
+2025-11-30 21:01:38,661 - INFO - Testing individual server: OpenAPI Explorer
+2025-11-30 21:01:38,661 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:01:38,661 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:01:38,959 - INFO - Discovering available tools from OpenAPI Explorer...
+2025-11-30 21:01:39,286 - INFO - Discovered 2 tools from OpenAPI Explorer
+2025-11-30 21:01:39,294 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:01:39,294 - INFO - Total tools discovered: 2
+2025-11-30 21:01:39,294 - INFO - OpenAPI Explorer: 2 tools discovered
+2025-11-30 21:01:39,294 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:01:39,294 - INFO - All MCP server connections closed
+2025-11-30 21:01:39,294 - INFO - Waiting 2.0s before testing next server...
+2025-11-30 21:01:41,296 - INFO - Testing individual server: Unit Converter
+2025-11-30 21:01:41,297 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:01:41,298 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:01:42,411 - INFO - Discovering available tools from Unit Converter...
+2025-11-30 21:01:42,414 - INFO - Discovered 16 tools from Unit Converter
+2025-11-30 21:01:42,474 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:01:42,474 - INFO - Total tools discovered: 16
+2025-11-30 21:01:42,474 - INFO - Unit Converter: 16 tools discovered
+2025-11-30 21:01:42,474 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:01:42,474 - INFO - All MCP server connections closed
+2025-11-30 21:01:42,474 - INFO - Waiting 2.0s before testing next server...
+2025-11-30 21:01:44,478 - INFO - Testing individual server: Wikipedia
+2025-11-30 21:01:44,482 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:01:44,483 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:01:50,414 - ERROR - Error connecting to STDIO server Wikipedia: unhandled errors in a TaskGroup (1 sub-exception)
+2025-11-30 21:01:50,418 - ERROR - Full traceback:
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 93, in _connect_stdio_server
+  |     async with stdio_client(connector.server_params) as (read, write):
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/contextlib.py", line 217, in __aexit__
+  |     await self.gen.athrow(typ, value, traceback)
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/stdio/__init__.py", line 180, in stdio_client
+  |     async with (
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/stdio/__init__.py", line 187, in stdio_client
+    |     yield read_stream, write_stream
+    |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 94, in _connect_stdio_server
+    |     async with ClientSession(read, write) as session:
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/shared/session.py", line 218, in __aexit__
+    |     return await self._task_group.__aexit__(exc_type, exc_val, exc_tb)
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+    |     raise BaseExceptionGroup(
+    | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 95, in _connect_stdio_server
+      |     await session.initialize()
+      |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/session.py", line 151, in initialize
+      |     result = await self.send_request(
+      |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/shared/session.py", line 286, in send_request
+      |     raise McpError(response_or_error.error)
+      | mcp.shared.exceptions.McpError: Connection closed
+      +------------------------------------
+
+2025-11-30 21:01:50,418 - ERROR - Cause: None
+2025-11-30 21:01:50,418 - ERROR - Context: unhandled errors in a TaskGroup (1 sub-exception)
+2025-11-30 21:01:50,418 - ERROR - Sub-exception 1: unhandled errors in a TaskGroup (1 sub-exception)
+2025-11-30 21:01:50,418 - ERROR - Failed to connect to Wikipedia: unhandled errors in a TaskGroup (1 sub-exception)
+2025-11-30 21:01:50,418 - INFO - Successfully connected to 0/1 servers
+2025-11-30 21:01:50,419 - INFO - Total tools discovered: 0
+2025-11-30 21:01:50,419 - INFO - Wikipedia: 0 tools discovered
+2025-11-30 21:01:50,419 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:01:50,420 - INFO - All MCP server connections closed
+2025-11-30 21:01:50,420 - INFO - Waiting 2.0s before testing next server...
+2025-11-30 21:01:52,421 - INFO - Testing individual server: Google Maps
+2025-11-30 21:01:52,422 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:01:52,423 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:01:52,423 - INFO - Connecting to Google Maps with HTTP transport on port 3001
+2025-11-30 21:01:52,423 - INFO - Starting with configured port 3001 for Google Maps
+2025-11-30 21:01:52,424 - INFO - Attempt 1: Trying configured port 3001 for Google Maps
+2025-11-30 21:01:52,424 - INFO - Command: node dist/cli.js --port 3001
+2025-11-30 21:01:55,467 - INFO - Successfully started HTTP server for Google Maps on port 3001
+2025-11-30 21:01:55,491 - INFO - Discovered 7 tools from HTTP server Google Maps
+2025-11-30 21:01:55,491 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:01:55,491 - INFO - Total tools discovered: 7
+2025-11-30 21:01:55,491 - INFO - Google Maps: 7 tools discovered
+2025-11-30 21:01:55,491 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:01:55,491 - INFO - Scheduling cleanup for HTTP server Google Maps
+2025-11-30 21:01:55,491 - INFO - Waiting for 1 HTTP servers to shutdown...
+2025-11-30 21:01:55,492 - INFO - Stopping HTTP server for Google Maps (PID: 52791, Port: 3001)
+2025-11-30 21:01:58,494 - INFO - HTTP server process 52791 for Google Maps has exited
+2025-11-30 21:01:59,497 - INFO - Port 3001 successfully released for Google Maps
+2025-11-30 21:01:59,497 - INFO - All MCP server connections closed
+2025-11-30 21:01:59,498 - INFO - Waiting 2.0s before testing next server...
+2025-11-30 21:02:01,498 - INFO - Testing individual server: Bibliomantic
+2025-11-30 21:02:01,498 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:02:01,499 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:02:01,869 - INFO - Discovering available tools from Bibliomantic...
+2025-11-30 21:02:01,871 - INFO - Discovered 4 tools from Bibliomantic
+2025-11-30 21:02:01,963 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:02:01,963 - INFO - Total tools discovered: 4
+2025-11-30 21:02:01,963 - INFO - Bibliomantic: 4 tools discovered
+2025-11-30 21:02:01,963 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:02:01,963 - INFO - All MCP server connections closed
+2025-11-30 21:02:01,963 - INFO - Batch 1 complete: 5/5 servers, 29 tools
+2025-11-30 21:02:01,963 - INFO - Waiting 5.0s before next batch...
+2025-11-30 21:02:06,965 - INFO - Starting batch 2/6
+2025-11-30 21:02:06,967 - INFO - Processing batch 2 with 5 servers in INDIVIDUAL mode...
+2025-11-30 21:02:06,968 - INFO -    Servers in this batch: BioMCP, Call for Papers, Car Price Evaluator, Context7, DEX Paprika
+2025-11-30 21:02:06,968 - INFO - Testing individual server: BioMCP
+2025-11-30 21:02:06,968 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:02:06,969 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:02:09,618 - INFO - Discovering available tools from BioMCP...
+2025-11-30 21:02:09,631 - INFO - Discovered 35 tools from BioMCP
+2025-11-30 21:02:09,755 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:02:09,755 - INFO - Total tools discovered: 35
+2025-11-30 21:02:09,755 - INFO - BioMCP: 35 tools discovered
+2025-11-30 21:02:09,755 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:02:09,755 - INFO - All MCP server connections closed
+2025-11-30 21:02:09,755 - INFO - Waiting 2.0s before testing next server...
+2025-11-30 21:02:11,757 - INFO - Testing individual server: Call for Papers
+2025-11-30 21:02:11,757 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:02:11,758 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:02:13,118 - INFO - Discovering available tools from Call for Papers...
+2025-11-30 21:02:13,122 - INFO - Discovered 1 tools from Call for Papers
+2025-11-30 21:02:13,187 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:02:13,187 - INFO - Total tools discovered: 1
+2025-11-30 21:02:13,187 - INFO - Call for Papers: 1 tools discovered
+2025-11-30 21:02:13,187 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:02:13,187 - INFO - All MCP server connections closed
+2025-11-30 21:02:13,187 - INFO - Waiting 2.0s before testing next server...
+2025-11-30 21:02:15,189 - INFO - Testing individual server: Car Price Evaluator
+2025-11-30 21:02:15,189 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:02:15,190 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:02:15,615 - INFO - Discovering available tools from Car Price Evaluator...
+2025-11-30 21:02:15,619 - INFO - Discovered 3 tools from Car Price Evaluator
+2025-11-30 21:02:15,700 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:02:15,700 - INFO - Total tools discovered: 3
+2025-11-30 21:02:15,700 - INFO - Car Price Evaluator: 3 tools discovered
+2025-11-30 21:02:15,700 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:02:15,700 - INFO - All MCP server connections closed
+2025-11-30 21:02:15,700 - INFO - Waiting 2.0s before testing next server...
+2025-11-30 21:02:17,702 - INFO - Testing individual server: Context7
+2025-11-30 21:02:17,702 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:02:17,703 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:02:17,893 - INFO - Discovering available tools from Context7...
+2025-11-30 21:02:17,897 - INFO - Discovered 2 tools from Context7
+2025-11-30 21:02:17,907 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:02:17,907 - INFO - Total tools discovered: 2
+2025-11-30 21:02:17,907 - INFO - Context7: 2 tools discovered
+2025-11-30 21:02:17,907 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:02:17,907 - INFO - All MCP server connections closed
+2025-11-30 21:02:17,907 - INFO - Waiting 2.0s before testing next server...
+2025-11-30 21:02:19,910 - INFO - Testing individual server: DEX Paprika
+2025-11-30 21:02:19,913 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:02:19,914 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:02:20,040 - INFO - Discovering available tools from DEX Paprika...
+2025-11-30 21:02:20,043 - INFO - Discovered 11 tools from DEX Paprika
+2025-11-30 21:02:20,046 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:02:20,046 - INFO - Total tools discovered: 11
+2025-11-30 21:02:20,046 - INFO - DEX Paprika: 11 tools discovered
+2025-11-30 21:02:20,046 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:02:20,046 - INFO - All MCP server connections closed
+2025-11-30 21:02:20,046 - INFO - Batch 2 complete: 5/5 servers, 52 tools
+2025-11-30 21:02:20,047 - INFO - Waiting 5.0s before next batch...
+2025-11-30 21:02:25,049 - INFO - Starting batch 3/6
+2025-11-30 21:02:25,050 - INFO - Processing batch 3 with 5 servers in INDIVIDUAL mode...
+2025-11-30 21:02:25,051 - INFO -    Servers in this batch: FruityVice, Game Trends, Huge Icons, Hugging Face, Math MCP
+2025-11-30 21:02:25,051 - INFO - Testing individual server: FruityVice
+2025-11-30 21:02:25,051 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:02:25,051 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:02:25,424 - INFO - Discovering available tools from FruityVice...
+2025-11-30 21:02:25,428 - INFO - Discovered 1 tools from FruityVice
+2025-11-30 21:02:25,469 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:02:25,469 - INFO - Total tools discovered: 1
+2025-11-30 21:02:25,469 - INFO - FruityVice: 1 tools discovered
+2025-11-30 21:02:25,469 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:02:25,469 - INFO - All MCP server connections closed
+2025-11-30 21:02:25,469 - INFO - Waiting 2.0s before testing next server...
+2025-11-30 21:02:27,471 - INFO - Testing individual server: Game Trends
+2025-11-30 21:02:27,471 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:02:27,471 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:02:27,917 - INFO - Discovering available tools from Game Trends...
+2025-11-30 21:02:27,919 - INFO - Discovered 7 tools from Game Trends
+2025-11-30 21:02:27,983 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:02:27,983 - INFO - Total tools discovered: 7
+2025-11-30 21:02:27,984 - INFO - Game Trends: 7 tools discovered
+2025-11-30 21:02:27,984 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:02:27,984 - INFO - All MCP server connections closed
+2025-11-30 21:02:27,984 - INFO - Waiting 2.0s before testing next server...
+2025-11-30 21:02:29,985 - INFO - Testing individual server: Huge Icons
+2025-11-30 21:02:29,986 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:02:29,986 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:02:30,128 - INFO - Discovering available tools from Huge Icons...
+2025-11-30 21:02:30,129 - INFO - Discovered 3 tools from Huge Icons
+2025-11-30 21:02:30,132 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:02:30,132 - INFO - Total tools discovered: 3
+2025-11-30 21:02:30,132 - INFO - Huge Icons: 3 tools discovered
+2025-11-30 21:02:30,132 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:02:30,132 - INFO - All MCP server connections closed
+2025-11-30 21:02:30,132 - INFO - Waiting 2.0s before testing next server...
+2025-11-30 21:02:32,133 - INFO - Testing individual server: Hugging Face
+2025-11-30 21:02:32,134 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:02:32,134 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:02:32,616 - INFO - Discovering available tools from Hugging Face...
+2025-11-30 21:02:32,618 - INFO - Discovered 10 tools from Hugging Face
+2025-11-30 21:02:32,664 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:02:32,664 - INFO - Total tools discovered: 10
+2025-11-30 21:02:32,664 - INFO - Hugging Face: 10 tools discovered
+2025-11-30 21:02:32,664 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:02:32,664 - INFO - All MCP server connections closed
+2025-11-30 21:02:32,664 - INFO - Waiting 2.0s before testing next server...
+2025-11-30 21:02:34,666 - INFO - Testing individual server: Math MCP
+2025-11-30 21:02:34,667 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:02:34,667 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:02:34,760 - INFO - Discovering available tools from Math MCP...
+2025-11-30 21:02:34,763 - INFO - Discovered 13 tools from Math MCP
+2025-11-30 21:02:34,765 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:02:34,765 - INFO - Total tools discovered: 13
+2025-11-30 21:02:34,766 - INFO - Math MCP: 13 tools discovered
+2025-11-30 21:02:34,766 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:02:34,766 - INFO - All MCP server connections closed
+2025-11-30 21:02:34,766 - INFO - Batch 3 complete: 5/5 servers, 34 tools
+2025-11-30 21:02:34,766 - INFO - Waiting 5.0s before next batch...
+2025-11-30 21:02:39,768 - INFO - Starting batch 4/6
+2025-11-30 21:02:39,769 - INFO - Processing batch 4 with 5 servers in INDIVIDUAL mode...
+2025-11-30 21:02:39,769 - INFO -    Servers in this batch: NixOS, OSINT Intelligence, Reddit, National Parks, Medical Calculator
+2025-11-30 21:02:39,769 - INFO - Testing individual server: NixOS
+2025-11-30 21:02:39,770 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:02:39,770 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:02:40,167 - INFO - Discovering available tools from NixOS...
+2025-11-30 21:02:40,171 - INFO - Discovered 18 tools from NixOS
+2025-11-30 21:02:40,223 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:02:40,223 - INFO - Total tools discovered: 18
+2025-11-30 21:02:40,223 - INFO - NixOS: 18 tools discovered
+2025-11-30 21:02:40,223 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:02:40,223 - INFO - All MCP server connections closed
+2025-11-30 21:02:40,223 - INFO - Waiting 2.0s before testing next server...
+2025-11-30 21:02:42,224 - INFO - Testing individual server: OSINT Intelligence
+2025-11-30 21:02:42,225 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:02:42,226 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:02:42,647 - INFO - Discovering available tools from OSINT Intelligence...
+2025-11-30 21:02:42,648 - INFO - Discovered 7 tools from OSINT Intelligence
+2025-11-30 21:02:42,709 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:02:42,709 - INFO - Total tools discovered: 7
+2025-11-30 21:02:42,709 - INFO - OSINT Intelligence: 7 tools discovered
+2025-11-30 21:02:42,709 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:02:42,709 - INFO - All MCP server connections closed
+2025-11-30 21:02:42,709 - INFO - Waiting 2.0s before testing next server...
+2025-11-30 21:02:44,711 - INFO - Testing individual server: Reddit
+2025-11-30 21:02:44,712 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:02:44,712 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:02:50,300 - ERROR - Error connecting to STDIO server Reddit: unhandled errors in a TaskGroup (1 sub-exception)
+2025-11-30 21:02:50,302 - ERROR - Full traceback:
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 93, in _connect_stdio_server
+  |     async with stdio_client(connector.server_params) as (read, write):
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/contextlib.py", line 217, in __aexit__
+  |     await self.gen.athrow(typ, value, traceback)
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/stdio/__init__.py", line 180, in stdio_client
+  |     async with (
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/stdio/__init__.py", line 187, in stdio_client
+    |     yield read_stream, write_stream
+    |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 94, in _connect_stdio_server
+    |     async with ClientSession(read, write) as session:
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/shared/session.py", line 218, in __aexit__
+    |     return await self._task_group.__aexit__(exc_type, exc_val, exc_tb)
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+    |     raise BaseExceptionGroup(
+    | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 95, in _connect_stdio_server
+      |     await session.initialize()
+      |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/session.py", line 151, in initialize
+      |     result = await self.send_request(
+      |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/shared/session.py", line 286, in send_request
+      |     raise McpError(response_or_error.error)
+      | mcp.shared.exceptions.McpError: Connection closed
+      +------------------------------------
+
+2025-11-30 21:02:50,302 - ERROR - Cause: None
+2025-11-30 21:02:50,302 - ERROR - Context: unhandled errors in a TaskGroup (1 sub-exception)
+2025-11-30 21:02:50,302 - ERROR - Sub-exception 1: unhandled errors in a TaskGroup (1 sub-exception)
+2025-11-30 21:02:50,302 - ERROR - Failed to connect to Reddit: unhandled errors in a TaskGroup (1 sub-exception)
+2025-11-30 21:02:50,302 - INFO - Successfully connected to 0/1 servers
+2025-11-30 21:02:50,302 - INFO - Total tools discovered: 0
+2025-11-30 21:02:50,302 - INFO - Reddit: 0 tools discovered
+2025-11-30 21:02:50,302 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:02:50,302 - INFO - All MCP server connections closed
+2025-11-30 21:02:50,302 - INFO - Waiting 2.0s before testing next server...
+2025-11-30 21:02:52,303 - INFO - Testing individual server: National Parks
+2025-11-30 21:02:52,304 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:02:52,304 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:02:52,478 - INFO - Discovering available tools from National Parks...
+2025-11-30 21:02:52,481 - INFO - Discovered 6 tools from National Parks
+2025-11-30 21:02:52,488 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:02:52,488 - INFO - Total tools discovered: 6
+2025-11-30 21:02:52,488 - INFO - National Parks: 6 tools discovered
+2025-11-30 21:02:52,488 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:02:52,488 - INFO - All MCP server connections closed
+2025-11-30 21:02:52,488 - INFO - Waiting 2.0s before testing next server...
+2025-11-30 21:02:54,489 - INFO - Testing individual server: Medical Calculator
+2025-11-30 21:02:54,490 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:02:54,491 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:03:11,148 - INFO - Discovering available tools from Medical Calculator...
+2025-11-30 21:03:11,155 - INFO - Discovered 22 tools from Medical Calculator
+2025-11-30 21:03:11,280 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:03:11,280 - INFO - Total tools discovered: 22
+2025-11-30 21:03:11,280 - INFO - Medical Calculator: 22 tools discovered
+2025-11-30 21:03:11,280 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:03:11,280 - INFO - All MCP server connections closed
+2025-11-30 21:03:11,280 - INFO - Batch 4 complete: 5/5 servers, 53 tools
+2025-11-30 21:03:11,280 - INFO - Waiting 5.0s before next batch...
+2025-11-30 21:03:16,281 - INFO - Starting batch 5/6
+2025-11-30 21:03:16,282 - INFO - Processing batch 5 with 5 servers in INDIVIDUAL mode...
+2025-11-30 21:03:16,282 - INFO -    Servers in this batch: Metropolitan Museum, Movie Recommender, NASA Data, OKX Exchange, Paper Search
+2025-11-30 21:03:16,282 - INFO - Testing individual server: Metropolitan Museum
+2025-11-30 21:03:16,283 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:03:16,283 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:03:16,494 - INFO - Discovering available tools from Metropolitan Museum...
+2025-11-30 21:03:16,496 - INFO - Discovered 3 tools from Metropolitan Museum
+2025-11-30 21:03:16,505 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:03:16,505 - INFO - Total tools discovered: 3
+2025-11-30 21:03:16,505 - INFO - Metropolitan Museum: 3 tools discovered
+2025-11-30 21:03:16,505 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:03:16,505 - INFO - All MCP server connections closed
+2025-11-30 21:03:16,505 - INFO - Waiting 2.0s before testing next server...
+2025-11-30 21:03:18,506 - INFO - Testing individual server: Movie Recommender
+2025-11-30 21:03:18,507 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:03:18,507 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:03:18,919 - INFO - Discovering available tools from Movie Recommender...
+2025-11-30 21:03:18,922 - INFO - Discovered 1 tools from Movie Recommender
+2025-11-30 21:03:18,972 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:03:18,972 - INFO - Total tools discovered: 1
+2025-11-30 21:03:18,972 - INFO - Movie Recommender: 1 tools discovered
+2025-11-30 21:03:18,972 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:03:18,972 - INFO - All MCP server connections closed
+2025-11-30 21:03:18,972 - INFO - Waiting 2.0s before testing next server...
+2025-11-30 21:03:20,973 - INFO - Testing individual server: NASA Data
+2025-11-30 21:03:20,974 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:03:20,975 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:03:22,190 - INFO - Discovering available tools from NASA Data...
+2025-11-30 21:03:22,192 - INFO - Discovered 21 tools from NASA Data
+2025-11-30 21:03:24,297 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:03:24,298 - INFO - Total tools discovered: 21
+2025-11-30 21:03:24,299 - INFO - NASA Data: 21 tools discovered
+2025-11-30 21:03:24,299 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:03:24,299 - INFO - All MCP server connections closed
+2025-11-30 21:03:24,300 - INFO - Waiting 2.0s before testing next server...
+2025-11-30 21:03:26,301 - INFO - Testing individual server: OKX Exchange
+2025-11-30 21:03:26,302 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:03:26,302 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:03:26,444 - INFO - Discovering available tools from OKX Exchange...
+2025-11-30 21:03:26,445 - INFO - Discovered 2 tools from OKX Exchange
+2025-11-30 21:03:26,447 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:03:26,448 - INFO - Total tools discovered: 2
+2025-11-30 21:03:26,448 - INFO - OKX Exchange: 2 tools discovered
+2025-11-30 21:03:26,448 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:03:26,448 - INFO - All MCP server connections closed
+2025-11-30 21:03:26,448 - INFO - Waiting 2.0s before testing next server...
+2025-11-30 21:03:28,449 - INFO - Testing individual server: Paper Search
+2025-11-30 21:03:28,450 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:03:28,450 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:03:29,507 - INFO - Discovering available tools from Paper Search...
+2025-11-30 21:03:29,510 - INFO - Discovered 19 tools from Paper Search
+2025-11-30 21:03:29,592 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:03:29,592 - INFO - Total tools discovered: 19
+2025-11-30 21:03:29,592 - INFO - Paper Search: 19 tools discovered
+2025-11-30 21:03:29,592 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:03:29,592 - INFO - All MCP server connections closed
+2025-11-30 21:03:29,592 - INFO - Batch 5 complete: 5/5 servers, 46 tools
+2025-11-30 21:03:29,592 - INFO - Waiting 5.0s before next batch...
+2025-11-30 21:03:34,595 - INFO - Starting batch 6/6
+2025-11-30 21:03:34,596 - INFO - Processing batch 6 with 3 servers in INDIVIDUAL mode...
+2025-11-30 21:03:34,596 - INFO -    Servers in this batch: Scientific Computing, Weather Data, Time MCP
+2025-11-30 21:03:34,596 - INFO - Testing individual server: Scientific Computing
+2025-11-30 21:03:34,596 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:03:34,597 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:03:39,009 - INFO - Discovering available tools from Scientific Computing...
+2025-11-30 21:03:39,015 - INFO - Discovered 26 tools from Scientific Computing
+2025-11-30 21:03:39,145 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:03:39,145 - INFO - Total tools discovered: 26
+2025-11-30 21:03:39,146 - INFO - Scientific Computing: 26 tools discovered
+2025-11-30 21:03:39,146 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:03:39,146 - INFO - All MCP server connections closed
+2025-11-30 21:03:39,146 - INFO - Waiting 2.0s before testing next server...
+2025-11-30 21:03:41,147 - INFO - Testing individual server: Weather Data
+2025-11-30 21:03:41,147 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:03:41,148 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:03:41,491 - INFO - Discovering available tools from Weather Data...
+2025-11-30 21:03:41,494 - INFO - Discovered 4 tools from Weather Data
+2025-11-30 21:03:41,544 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:03:41,544 - INFO - Total tools discovered: 4
+2025-11-30 21:03:41,544 - INFO - Weather Data: 4 tools discovered
+2025-11-30 21:03:41,544 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:03:41,544 - INFO - All MCP server connections closed
+2025-11-30 21:03:41,544 - INFO - Waiting 2.0s before testing next server...
+2025-11-30 21:03:43,546 - INFO - Testing individual server: Time MCP
+2025-11-30 21:03:43,547 - INFO - MultiServerManager initialized with 1 server configurations
+2025-11-30 21:03:43,547 - INFO - Connecting to 1 MCP servers...
+2025-11-30 21:03:43,861 - INFO - Discovering available tools from Time MCP...
+2025-11-30 21:03:43,862 - INFO - Discovered 2 tools from Time MCP
+2025-11-30 21:03:43,900 - INFO - Successfully connected to 1/1 servers
+2025-11-30 21:03:43,900 - INFO - Total tools discovered: 2
+2025-11-30 21:03:43,901 - INFO - Time MCP: 2 tools discovered
+2025-11-30 21:03:43,901 - INFO - Closing connections to 1 MCP servers...
+2025-11-30 21:03:43,901 - INFO - All MCP server connections closed
+2025-11-30 21:03:43,901 - INFO - Batch 6 complete: 3/3 servers, 32 tools
+2025-11-30 21:03:43,901 - INFO - Collection complete: 28/28 servers connected, 246 tools discovered
+2025-11-30 21:03:43,910 - INFO - Data saved to /Users/chetan/projects/mcp-bench/mcp_servers_info.json
+2025-11-30 21:03:43,915 - INFO - Markdown documentation saved to /Users/chetan/projects/mcp-bench/mcp_servers_info.md
+2025-12-03 14:18:51,851 - INFO - Loaded 28 local server configurations
+2025-12-03 14:18:51,852 - INFO - Loaded 5 API keys
+2025-12-03 14:18:51,852 - INFO - Starting MCP server information collection in INDIVIDUAL mode...
+2025-12-03 14:18:51,852 - INFO - Added Node.js path to environment: /Users/zhenting.wang/.nvm/versions/node/v22.16.0/bin
+2025-12-03 14:18:51,852 - INFO - Loading local server configurations...
+2025-12-03 14:18:51,852 - INFO - Loaded 28 server configurations
+2025-12-03 14:18:51,852 - INFO - Starting batch 1/6
+2025-12-03 14:18:51,852 - INFO - Processing batch 1 with 5 servers in INDIVIDUAL mode...
+2025-12-03 14:18:51,852 - INFO -    Servers in this batch: OpenAPI Explorer, Unit Converter, Wikipedia, Google Maps, Bibliomantic
+2025-12-03 14:18:51,852 - INFO - Testing individual server: OpenAPI Explorer
+2025-12-03 14:18:51,852 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:18:51,852 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:18:52,118 - INFO - Discovering available tools from OpenAPI Explorer...
+2025-12-03 14:18:52,482 - INFO - Discovered 2 tools from OpenAPI Explorer
+2025-12-03 14:18:52,491 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:18:52,491 - INFO - Total tools discovered: 2
+2025-12-03 14:18:52,491 - INFO - OpenAPI Explorer: 2 tools discovered
+2025-12-03 14:18:52,491 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:18:52,491 - INFO - All MCP server connections closed
+2025-12-03 14:18:52,491 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 14:18:54,493 - INFO - Testing individual server: Unit Converter
+2025-12-03 14:18:54,493 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:18:54,493 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:18:54,981 - INFO - Discovering available tools from Unit Converter...
+2025-12-03 14:18:54,983 - INFO - Discovered 16 tools from Unit Converter
+2025-12-03 14:18:55,043 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:18:55,044 - INFO - Total tools discovered: 16
+2025-12-03 14:18:55,044 - INFO - Unit Converter: 16 tools discovered
+2025-12-03 14:18:55,044 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:18:55,044 - INFO - All MCP server connections closed
+2025-12-03 14:18:55,044 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 14:18:57,045 - INFO - Testing individual server: Wikipedia
+2025-12-03 14:18:57,045 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:18:57,046 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:19:02,963 - ERROR - Error connecting to STDIO server Wikipedia: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 14:19:02,967 - ERROR - Full traceback:
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 93, in _connect_stdio_server
+  |     async with stdio_client(connector.server_params) as (read, write):
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/contextlib.py", line 217, in __aexit__
+  |     await self.gen.athrow(typ, value, traceback)
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/stdio/__init__.py", line 180, in stdio_client
+  |     async with (
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/stdio/__init__.py", line 187, in stdio_client
+    |     yield read_stream, write_stream
+    |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 94, in _connect_stdio_server
+    |     async with ClientSession(read, write) as session:
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/shared/session.py", line 218, in __aexit__
+    |     return await self._task_group.__aexit__(exc_type, exc_val, exc_tb)
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+    |     raise BaseExceptionGroup(
+    | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 95, in _connect_stdio_server
+      |     await session.initialize()
+      |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/session.py", line 151, in initialize
+      |     result = await self.send_request(
+      |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/shared/session.py", line 286, in send_request
+      |     raise McpError(response_or_error.error)
+      | mcp.shared.exceptions.McpError: Connection closed
+      +------------------------------------
+
+2025-12-03 14:19:02,967 - ERROR - Cause: None
+2025-12-03 14:19:02,967 - ERROR - Context: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 14:19:02,967 - ERROR - Sub-exception 1: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 14:19:02,967 - ERROR - Failed to connect to Wikipedia: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 14:19:02,967 - INFO - Successfully connected to 0/1 servers
+2025-12-03 14:19:02,967 - INFO - Total tools discovered: 0
+2025-12-03 14:19:02,967 - INFO - Wikipedia: 0 tools discovered
+2025-12-03 14:19:02,967 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:19:02,967 - INFO - All MCP server connections closed
+2025-12-03 14:19:02,967 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 14:19:04,969 - INFO - Testing individual server: Google Maps
+2025-12-03 14:19:04,970 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:19:04,970 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:19:04,970 - INFO - Connecting to Google Maps with HTTP transport on port 3001
+2025-12-03 14:19:04,971 - INFO - Starting with configured port 3001 for Google Maps
+2025-12-03 14:19:04,971 - INFO - Attempt 1: Trying configured port 3001 for Google Maps
+2025-12-03 14:19:04,971 - INFO - Command: node dist/cli.js --port 3001
+2025-12-03 14:19:08,008 - INFO - Successfully started HTTP server for Google Maps on port 3001
+2025-12-03 14:19:08,036 - INFO - Discovered 7 tools from HTTP server Google Maps
+2025-12-03 14:19:08,036 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:19:08,036 - INFO - Total tools discovered: 7
+2025-12-03 14:19:08,036 - INFO - Google Maps: 7 tools discovered
+2025-12-03 14:19:08,036 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:19:08,036 - INFO - Scheduling cleanup for HTTP server Google Maps
+2025-12-03 14:19:08,036 - INFO - Waiting for 1 HTTP servers to shutdown...
+2025-12-03 14:19:08,036 - INFO - Stopping HTTP server for Google Maps (PID: 8416, Port: 3001)
+2025-12-03 14:19:11,040 - INFO - HTTP server process 8416 for Google Maps has exited
+2025-12-03 14:19:12,044 - INFO - Port 3001 successfully released for Google Maps
+2025-12-03 14:19:12,045 - INFO - All MCP server connections closed
+2025-12-03 14:19:12,045 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 14:19:14,047 - INFO - Testing individual server: Bibliomantic
+2025-12-03 14:19:14,047 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:19:14,049 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:19:14,467 - INFO - Discovering available tools from Bibliomantic...
+2025-12-03 14:19:14,470 - INFO - Discovered 4 tools from Bibliomantic
+2025-12-03 14:19:14,520 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:19:14,520 - INFO - Total tools discovered: 4
+2025-12-03 14:19:14,521 - INFO - Bibliomantic: 4 tools discovered
+2025-12-03 14:19:14,521 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:19:14,521 - INFO - All MCP server connections closed
+2025-12-03 14:19:14,521 - INFO - Batch 1 complete: 5/5 servers, 29 tools
+2025-12-03 14:19:14,521 - INFO - Waiting 5.0s before next batch...
+2025-12-03 14:19:19,522 - INFO - Starting batch 2/6
+2025-12-03 14:19:19,523 - INFO - Processing batch 2 with 5 servers in INDIVIDUAL mode...
+2025-12-03 14:19:19,523 - INFO -    Servers in this batch: BioMCP, Call for Papers, Car Price Evaluator, Context7, DEX Paprika
+2025-12-03 14:19:19,523 - INFO - Testing individual server: BioMCP
+2025-12-03 14:19:19,523 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:19:19,524 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:19:20,735 - INFO - Discovering available tools from BioMCP...
+2025-12-03 14:19:20,748 - INFO - Discovered 35 tools from BioMCP
+2025-12-03 14:19:20,853 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:19:20,853 - INFO - Total tools discovered: 35
+2025-12-03 14:19:20,853 - INFO - BioMCP: 35 tools discovered
+2025-12-03 14:19:20,853 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:19:20,853 - INFO - All MCP server connections closed
+2025-12-03 14:19:20,853 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 14:19:22,854 - INFO - Testing individual server: Call for Papers
+2025-12-03 14:19:22,855 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:19:22,855 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:19:23,372 - INFO - Discovering available tools from Call for Papers...
+2025-12-03 14:19:23,375 - INFO - Discovered 1 tools from Call for Papers
+2025-12-03 14:19:23,425 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:19:23,425 - INFO - Total tools discovered: 1
+2025-12-03 14:19:23,426 - INFO - Call for Papers: 1 tools discovered
+2025-12-03 14:19:23,426 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:19:23,426 - INFO - All MCP server connections closed
+2025-12-03 14:19:23,426 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 14:19:25,427 - INFO - Testing individual server: Car Price Evaluator
+2025-12-03 14:19:25,428 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:19:25,428 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:19:25,759 - INFO - Discovering available tools from Car Price Evaluator...
+2025-12-03 14:19:25,762 - INFO - Discovered 3 tools from Car Price Evaluator
+2025-12-03 14:19:25,806 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:19:25,806 - INFO - Total tools discovered: 3
+2025-12-03 14:19:25,806 - INFO - Car Price Evaluator: 3 tools discovered
+2025-12-03 14:19:25,806 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:19:25,806 - INFO - All MCP server connections closed
+2025-12-03 14:19:25,806 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 14:19:27,807 - INFO - Testing individual server: Context7
+2025-12-03 14:19:27,808 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:19:27,808 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:19:27,932 - INFO - Discovering available tools from Context7...
+2025-12-03 14:19:27,934 - INFO - Discovered 2 tools from Context7
+2025-12-03 14:19:27,938 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:19:27,938 - INFO - Total tools discovered: 2
+2025-12-03 14:19:27,938 - INFO - Context7: 2 tools discovered
+2025-12-03 14:19:27,938 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:19:27,938 - INFO - All MCP server connections closed
+2025-12-03 14:19:27,938 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 14:19:29,939 - INFO - Testing individual server: DEX Paprika
+2025-12-03 14:19:29,940 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:19:29,941 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:19:30,055 - INFO - Discovering available tools from DEX Paprika...
+2025-12-03 14:19:30,058 - INFO - Discovered 11 tools from DEX Paprika
+2025-12-03 14:19:30,062 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:19:30,063 - INFO - Total tools discovered: 11
+2025-12-03 14:19:30,063 - INFO - DEX Paprika: 11 tools discovered
+2025-12-03 14:19:30,063 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:19:30,063 - INFO - All MCP server connections closed
+2025-12-03 14:19:30,063 - INFO - Batch 2 complete: 5/5 servers, 52 tools
+2025-12-03 14:19:30,063 - INFO - Waiting 5.0s before next batch...
+2025-12-03 14:19:35,064 - INFO - Starting batch 3/6
+2025-12-03 14:19:35,065 - INFO - Processing batch 3 with 5 servers in INDIVIDUAL mode...
+2025-12-03 14:19:35,065 - INFO -    Servers in this batch: FruityVice, Game Trends, Huge Icons, Hugging Face, Math MCP
+2025-12-03 14:19:35,065 - INFO - Testing individual server: FruityVice
+2025-12-03 14:19:35,066 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:19:35,066 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:19:35,382 - INFO - Discovering available tools from FruityVice...
+2025-12-03 14:19:35,385 - INFO - Discovered 1 tools from FruityVice
+2025-12-03 14:19:35,427 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:19:35,427 - INFO - Total tools discovered: 1
+2025-12-03 14:19:35,427 - INFO - FruityVice: 1 tools discovered
+2025-12-03 14:19:35,427 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:19:35,427 - INFO - All MCP server connections closed
+2025-12-03 14:19:35,427 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 14:19:37,428 - INFO - Testing individual server: Game Trends
+2025-12-03 14:19:37,429 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:19:37,430 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:19:37,875 - INFO - Discovering available tools from Game Trends...
+2025-12-03 14:19:37,877 - INFO - Discovered 7 tools from Game Trends
+2025-12-03 14:19:37,945 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:19:37,945 - INFO - Total tools discovered: 7
+2025-12-03 14:19:37,945 - INFO - Game Trends: 7 tools discovered
+2025-12-03 14:19:37,945 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:19:37,945 - INFO - All MCP server connections closed
+2025-12-03 14:19:37,945 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 14:19:39,947 - INFO - Testing individual server: Huge Icons
+2025-12-03 14:19:39,947 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:19:39,948 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:19:40,094 - INFO - Discovering available tools from Huge Icons...
+2025-12-03 14:19:40,094 - INFO - Discovered 3 tools from Huge Icons
+2025-12-03 14:19:40,098 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:19:40,098 - INFO - Total tools discovered: 3
+2025-12-03 14:19:40,098 - INFO - Huge Icons: 3 tools discovered
+2025-12-03 14:19:40,098 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:19:40,098 - INFO - All MCP server connections closed
+2025-12-03 14:19:40,098 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 14:19:42,100 - INFO - Testing individual server: Hugging Face
+2025-12-03 14:19:42,101 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:19:42,102 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:19:42,505 - INFO - Discovering available tools from Hugging Face...
+2025-12-03 14:19:42,506 - INFO - Discovered 10 tools from Hugging Face
+2025-12-03 14:19:42,554 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:19:42,554 - INFO - Total tools discovered: 10
+2025-12-03 14:19:42,555 - INFO - Hugging Face: 10 tools discovered
+2025-12-03 14:19:42,555 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:19:42,555 - INFO - All MCP server connections closed
+2025-12-03 14:19:42,555 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 14:19:44,556 - INFO - Testing individual server: Math MCP
+2025-12-03 14:19:44,557 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:19:44,557 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:19:44,649 - INFO - Discovering available tools from Math MCP...
+2025-12-03 14:19:44,651 - INFO - Discovered 13 tools from Math MCP
+2025-12-03 14:19:44,654 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:19:44,654 - INFO - Total tools discovered: 13
+2025-12-03 14:19:44,654 - INFO - Math MCP: 13 tools discovered
+2025-12-03 14:19:44,654 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:19:44,654 - INFO - All MCP server connections closed
+2025-12-03 14:19:44,654 - INFO - Batch 3 complete: 5/5 servers, 34 tools
+2025-12-03 14:19:44,654 - INFO - Waiting 5.0s before next batch...
+2025-12-03 14:19:49,656 - INFO - Starting batch 4/6
+2025-12-03 14:19:49,657 - INFO - Processing batch 4 with 5 servers in INDIVIDUAL mode...
+2025-12-03 14:19:49,657 - INFO -    Servers in this batch: NixOS, OSINT Intelligence, Reddit, National Parks, Medical Calculator
+2025-12-03 14:19:49,657 - INFO - Testing individual server: NixOS
+2025-12-03 14:19:49,657 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:19:49,658 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:19:50,070 - INFO - Discovering available tools from NixOS...
+2025-12-03 14:19:50,075 - INFO - Discovered 18 tools from NixOS
+2025-12-03 14:19:50,126 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:19:50,126 - INFO - Total tools discovered: 18
+2025-12-03 14:19:50,127 - INFO - NixOS: 18 tools discovered
+2025-12-03 14:19:50,127 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:19:50,127 - INFO - All MCP server connections closed
+2025-12-03 14:19:50,127 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 14:19:52,128 - INFO - Testing individual server: OSINT Intelligence
+2025-12-03 14:19:52,129 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:19:52,129 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:19:52,550 - INFO - Discovering available tools from OSINT Intelligence...
+2025-12-03 14:19:52,551 - INFO - Discovered 7 tools from OSINT Intelligence
+2025-12-03 14:19:52,610 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:19:52,610 - INFO - Total tools discovered: 7
+2025-12-03 14:19:52,610 - INFO - OSINT Intelligence: 7 tools discovered
+2025-12-03 14:19:52,610 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:19:52,610 - INFO - All MCP server connections closed
+2025-12-03 14:19:52,610 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 14:19:54,612 - INFO - Testing individual server: Reddit
+2025-12-03 14:19:54,612 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:19:54,613 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:19:59,560 - ERROR - Error connecting to STDIO server Reddit: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 14:19:59,561 - ERROR - Full traceback:
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 93, in _connect_stdio_server
+  |     async with stdio_client(connector.server_params) as (read, write):
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/contextlib.py", line 217, in __aexit__
+  |     await self.gen.athrow(typ, value, traceback)
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/stdio/__init__.py", line 180, in stdio_client
+  |     async with (
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/stdio/__init__.py", line 187, in stdio_client
+    |     yield read_stream, write_stream
+    |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 94, in _connect_stdio_server
+    |     async with ClientSession(read, write) as session:
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/shared/session.py", line 218, in __aexit__
+    |     return await self._task_group.__aexit__(exc_type, exc_val, exc_tb)
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+    |     raise BaseExceptionGroup(
+    | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 95, in _connect_stdio_server
+      |     await session.initialize()
+      |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/session.py", line 151, in initialize
+      |     result = await self.send_request(
+      |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/shared/session.py", line 286, in send_request
+      |     raise McpError(response_or_error.error)
+      | mcp.shared.exceptions.McpError: Connection closed
+      +------------------------------------
+
+2025-12-03 14:19:59,561 - ERROR - Cause: None
+2025-12-03 14:19:59,561 - ERROR - Context: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 14:19:59,561 - ERROR - Sub-exception 1: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 14:19:59,561 - ERROR - Failed to connect to Reddit: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 14:19:59,561 - INFO - Successfully connected to 0/1 servers
+2025-12-03 14:19:59,561 - INFO - Total tools discovered: 0
+2025-12-03 14:19:59,561 - INFO - Reddit: 0 tools discovered
+2025-12-03 14:19:59,561 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:19:59,561 - INFO - All MCP server connections closed
+2025-12-03 14:19:59,561 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 14:20:01,562 - INFO - Testing individual server: National Parks
+2025-12-03 14:20:01,563 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:20:01,563 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:20:01,724 - INFO - Discovering available tools from National Parks...
+2025-12-03 14:20:01,727 - INFO - Discovered 6 tools from National Parks
+2025-12-03 14:20:01,735 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:20:01,735 - INFO - Total tools discovered: 6
+2025-12-03 14:20:01,735 - INFO - National Parks: 6 tools discovered
+2025-12-03 14:20:01,735 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:20:01,735 - INFO - All MCP server connections closed
+2025-12-03 14:20:01,735 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 14:20:03,736 - INFO - Testing individual server: Medical Calculator
+2025-12-03 14:20:03,737 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:20:03,737 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:20:05,359 - INFO - Discovering available tools from Medical Calculator...
+2025-12-03 14:20:05,363 - INFO - Discovered 22 tools from Medical Calculator
+2025-12-03 14:20:05,448 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:20:05,448 - INFO - Total tools discovered: 22
+2025-12-03 14:20:05,448 - INFO - Medical Calculator: 22 tools discovered
+2025-12-03 14:20:05,448 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:20:05,448 - INFO - All MCP server connections closed
+2025-12-03 14:20:05,448 - INFO - Batch 4 complete: 5/5 servers, 53 tools
+2025-12-03 14:20:05,448 - INFO - Waiting 5.0s before next batch...
+2025-12-03 14:20:10,460 - INFO - Starting batch 5/6
+2025-12-03 14:20:10,465 - INFO - Processing batch 5 with 5 servers in INDIVIDUAL mode...
+2025-12-03 14:20:10,465 - INFO -    Servers in this batch: Metropolitan Museum, Movie Recommender, NASA Data, OKX Exchange, Paper Search
+2025-12-03 14:20:10,465 - INFO - Testing individual server: Metropolitan Museum
+2025-12-03 14:20:10,465 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:20:10,466 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:20:10,615 - INFO - Discovering available tools from Metropolitan Museum...
+2025-12-03 14:20:10,618 - INFO - Discovered 3 tools from Metropolitan Museum
+2025-12-03 14:20:10,622 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:20:10,622 - INFO - Total tools discovered: 3
+2025-12-03 14:20:10,622 - INFO - Metropolitan Museum: 3 tools discovered
+2025-12-03 14:20:10,623 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:20:10,623 - INFO - All MCP server connections closed
+2025-12-03 14:20:10,623 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 14:20:12,624 - INFO - Testing individual server: Movie Recommender
+2025-12-03 14:20:12,625 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:20:12,625 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:20:13,021 - INFO - Discovering available tools from Movie Recommender...
+2025-12-03 14:20:13,024 - INFO - Discovered 1 tools from Movie Recommender
+2025-12-03 14:20:13,068 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:20:13,069 - INFO - Total tools discovered: 1
+2025-12-03 14:20:13,069 - INFO - Movie Recommender: 1 tools discovered
+2025-12-03 14:20:13,069 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:20:13,069 - INFO - All MCP server connections closed
+2025-12-03 14:20:13,069 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 14:20:15,070 - INFO - Testing individual server: NASA Data
+2025-12-03 14:20:15,071 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:20:15,071 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:20:15,570 - INFO - Discovering available tools from NASA Data...
+2025-12-03 14:20:15,572 - INFO - Discovered 21 tools from NASA Data
+2025-12-03 14:20:17,677 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:20:17,677 - INFO - Total tools discovered: 21
+2025-12-03 14:20:17,678 - INFO - NASA Data: 21 tools discovered
+2025-12-03 14:20:17,678 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:20:17,678 - INFO - All MCP server connections closed
+2025-12-03 14:20:17,678 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 14:20:19,680 - INFO - Testing individual server: OKX Exchange
+2025-12-03 14:20:19,681 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:20:19,681 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:20:19,818 - INFO - Discovering available tools from OKX Exchange...
+2025-12-03 14:20:19,819 - INFO - Discovered 2 tools from OKX Exchange
+2025-12-03 14:20:19,822 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:20:19,823 - INFO - Total tools discovered: 2
+2025-12-03 14:20:19,823 - INFO - OKX Exchange: 2 tools discovered
+2025-12-03 14:20:19,823 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:20:19,823 - INFO - All MCP server connections closed
+2025-12-03 14:20:19,823 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 14:20:21,824 - INFO - Testing individual server: Paper Search
+2025-12-03 14:20:21,825 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:20:21,825 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:20:22,487 - INFO - Discovering available tools from Paper Search...
+2025-12-03 14:20:22,492 - INFO - Discovered 19 tools from Paper Search
+2025-12-03 14:20:22,566 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:20:22,566 - INFO - Total tools discovered: 19
+2025-12-03 14:20:22,566 - INFO - Paper Search: 19 tools discovered
+2025-12-03 14:20:22,566 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:20:22,566 - INFO - All MCP server connections closed
+2025-12-03 14:20:22,566 - INFO - Batch 5 complete: 5/5 servers, 46 tools
+2025-12-03 14:20:22,566 - INFO - Waiting 5.0s before next batch...
+2025-12-03 14:20:27,567 - INFO - Starting batch 6/6
+2025-12-03 14:20:27,568 - INFO - Processing batch 6 with 3 servers in INDIVIDUAL mode...
+2025-12-03 14:20:27,568 - INFO -    Servers in this batch: Scientific Computing, Weather Data, Time MCP
+2025-12-03 14:20:27,568 - INFO - Testing individual server: Scientific Computing
+2025-12-03 14:20:27,569 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:20:27,569 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:20:28,488 - INFO - Discovering available tools from Scientific Computing...
+2025-12-03 14:20:28,492 - INFO - Discovered 26 tools from Scientific Computing
+2025-12-03 14:20:28,605 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:20:28,605 - INFO - Total tools discovered: 26
+2025-12-03 14:20:28,605 - INFO - Scientific Computing: 26 tools discovered
+2025-12-03 14:20:28,605 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:20:28,605 - INFO - All MCP server connections closed
+2025-12-03 14:20:28,605 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 14:20:30,607 - INFO - Testing individual server: Weather Data
+2025-12-03 14:20:30,607 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:20:30,608 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:20:30,950 - INFO - Discovering available tools from Weather Data...
+2025-12-03 14:20:30,953 - INFO - Discovered 4 tools from Weather Data
+2025-12-03 14:20:30,997 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:20:30,997 - INFO - Total tools discovered: 4
+2025-12-03 14:20:30,997 - INFO - Weather Data: 4 tools discovered
+2025-12-03 14:20:30,997 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:20:30,997 - INFO - All MCP server connections closed
+2025-12-03 14:20:30,997 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 14:20:32,999 - INFO - Testing individual server: Time MCP
+2025-12-03 14:20:32,999 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 14:20:33,000 - INFO - Connecting to 1 MCP servers...
+2025-12-03 14:20:33,304 - INFO - Discovering available tools from Time MCP...
+2025-12-03 14:20:33,305 - INFO - Discovered 2 tools from Time MCP
+2025-12-03 14:20:33,343 - INFO - Successfully connected to 1/1 servers
+2025-12-03 14:20:33,343 - INFO - Total tools discovered: 2
+2025-12-03 14:20:33,343 - INFO - Time MCP: 2 tools discovered
+2025-12-03 14:20:33,343 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 14:20:33,343 - INFO - All MCP server connections closed
+2025-12-03 14:20:33,343 - INFO - Batch 6 complete: 3/3 servers, 32 tools
+2025-12-03 14:20:33,343 - INFO - Collection complete: 28/28 servers connected, 246 tools discovered
+2025-12-03 14:20:33,351 - INFO - Data saved to /Users/chetan/projects/mcp-bench/mcp_servers_info.json
+2025-12-03 14:20:33,357 - INFO - Markdown documentation saved to /Users/chetan/projects/mcp-bench/mcp_servers_info.md
+2025-12-03 15:45:08,278 - INFO - Loaded 28 local server configurations
+2025-12-03 15:45:08,278 - INFO - Loaded 5 API keys
+2025-12-03 15:45:08,279 - INFO - Starting MCP server information collection in INDIVIDUAL mode...
+2025-12-03 15:45:08,279 - INFO - Added Node.js path to environment: /Users/zhenting.wang/.nvm/versions/node/v22.16.0/bin
+2025-12-03 15:45:08,279 - INFO - Loading local server configurations...
+2025-12-03 15:45:08,279 - INFO - Loaded 28 server configurations
+2025-12-03 15:45:08,279 - INFO - Starting batch 1/6
+2025-12-03 15:45:08,279 - INFO - Processing batch 1 with 5 servers in INDIVIDUAL mode...
+2025-12-03 15:45:08,279 - INFO -    Servers in this batch: OpenAPI Explorer, Unit Converter, Wikipedia, Google Maps, Bibliomantic
+2025-12-03 15:45:08,279 - INFO - Testing individual server: OpenAPI Explorer
+2025-12-03 15:45:08,279 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:45:08,279 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:45:08,403 - INFO - Discovering available tools from OpenAPI Explorer...
+2025-12-03 15:45:08,641 - INFO - Discovered 2 tools from OpenAPI Explorer
+2025-12-03 15:45:08,646 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:45:08,646 - INFO - Total tools discovered: 2
+2025-12-03 15:45:08,646 - INFO - OpenAPI Explorer: 2 tools discovered
+2025-12-03 15:45:08,646 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:45:08,646 - INFO - All MCP server connections closed
+2025-12-03 15:45:08,646 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 15:45:10,648 - INFO - Testing individual server: Unit Converter
+2025-12-03 15:45:10,649 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:45:10,649 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:45:11,131 - INFO - Discovering available tools from Unit Converter...
+2025-12-03 15:45:11,133 - INFO - Discovered 16 tools from Unit Converter
+2025-12-03 15:45:11,192 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:45:11,192 - INFO - Total tools discovered: 16
+2025-12-03 15:45:11,192 - INFO - Unit Converter: 16 tools discovered
+2025-12-03 15:45:11,193 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:45:11,193 - INFO - All MCP server connections closed
+2025-12-03 15:45:11,193 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 15:45:13,194 - INFO - Testing individual server: Wikipedia
+2025-12-03 15:45:13,195 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:45:13,195 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:45:17,852 - ERROR - Error connecting to STDIO server Wikipedia: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 15:45:17,855 - ERROR - Full traceback:
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 93, in _connect_stdio_server
+  |     async with stdio_client(connector.server_params) as (read, write):
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/contextlib.py", line 217, in __aexit__
+  |     await self.gen.athrow(typ, value, traceback)
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/stdio/__init__.py", line 180, in stdio_client
+  |     async with (
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/stdio/__init__.py", line 187, in stdio_client
+    |     yield read_stream, write_stream
+    |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 94, in _connect_stdio_server
+    |     async with ClientSession(read, write) as session:
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/shared/session.py", line 218, in __aexit__
+    |     return await self._task_group.__aexit__(exc_type, exc_val, exc_tb)
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+    |     raise BaseExceptionGroup(
+    | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 95, in _connect_stdio_server
+      |     await session.initialize()
+      |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/session.py", line 151, in initialize
+      |     result = await self.send_request(
+      |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/shared/session.py", line 286, in send_request
+      |     raise McpError(response_or_error.error)
+      | mcp.shared.exceptions.McpError: Connection closed
+      +------------------------------------
+
+2025-12-03 15:45:17,856 - ERROR - Cause: None
+2025-12-03 15:45:17,856 - ERROR - Context: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 15:45:17,856 - ERROR - Sub-exception 1: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 15:45:17,856 - ERROR - Failed to connect to Wikipedia: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 15:45:17,856 - INFO - Successfully connected to 0/1 servers
+2025-12-03 15:45:17,856 - INFO - Total tools discovered: 0
+2025-12-03 15:45:17,856 - INFO - Wikipedia: 0 tools discovered
+2025-12-03 15:45:17,856 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:45:17,856 - INFO - All MCP server connections closed
+2025-12-03 15:45:17,856 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 15:45:19,857 - INFO - Testing individual server: Google Maps
+2025-12-03 15:45:19,858 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:45:19,859 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:45:19,859 - INFO - Connecting to Google Maps with HTTP transport on port 3001
+2025-12-03 15:45:19,860 - INFO - Starting with configured port 3001 for Google Maps
+2025-12-03 15:45:19,860 - INFO - Attempt 1: Trying configured port 3001 for Google Maps
+2025-12-03 15:45:19,860 - INFO - Command: node dist/cli.js --port 3001
+2025-12-03 15:45:22,884 - INFO - Successfully started HTTP server for Google Maps on port 3001
+2025-12-03 15:45:22,899 - INFO - Discovered 7 tools from HTTP server Google Maps
+2025-12-03 15:45:22,899 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:45:22,899 - INFO - Total tools discovered: 7
+2025-12-03 15:45:22,899 - INFO - Google Maps: 7 tools discovered
+2025-12-03 15:45:22,899 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:45:22,899 - INFO - Scheduling cleanup for HTTP server Google Maps
+2025-12-03 15:45:22,899 - INFO - Waiting for 1 HTTP servers to shutdown...
+2025-12-03 15:45:22,899 - INFO - Stopping HTTP server for Google Maps (PID: 17342, Port: 3001)
+2025-12-03 15:45:25,900 - INFO - HTTP server process 17342 for Google Maps has exited
+2025-12-03 15:45:26,903 - INFO - Port 3001 successfully released for Google Maps
+2025-12-03 15:45:26,904 - INFO - All MCP server connections closed
+2025-12-03 15:45:26,904 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 15:45:28,906 - INFO - Testing individual server: Bibliomantic
+2025-12-03 15:45:28,906 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:45:28,906 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:45:29,250 - INFO - Discovering available tools from Bibliomantic...
+2025-12-03 15:45:29,251 - INFO - Discovered 4 tools from Bibliomantic
+2025-12-03 15:45:29,297 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:45:29,297 - INFO - Total tools discovered: 4
+2025-12-03 15:45:29,297 - INFO - Bibliomantic: 4 tools discovered
+2025-12-03 15:45:29,297 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:45:29,297 - INFO - All MCP server connections closed
+2025-12-03 15:45:29,297 - INFO - Batch 1 complete: 5/5 servers, 29 tools
+2025-12-03 15:45:29,297 - INFO - Waiting 5.0s before next batch...
+2025-12-03 15:45:34,301 - INFO - Starting batch 2/6
+2025-12-03 15:45:34,302 - INFO - Processing batch 2 with 5 servers in INDIVIDUAL mode...
+2025-12-03 15:45:34,302 - INFO -    Servers in this batch: BioMCP, Call for Papers, Car Price Evaluator, Context7, DEX Paprika
+2025-12-03 15:45:34,302 - INFO - Testing individual server: BioMCP
+2025-12-03 15:45:34,302 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:45:34,304 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:45:35,138 - INFO - Discovering available tools from BioMCP...
+2025-12-03 15:45:35,152 - INFO - Discovered 35 tools from BioMCP
+2025-12-03 15:45:35,236 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:45:35,236 - INFO - Total tools discovered: 35
+2025-12-03 15:45:35,237 - INFO - BioMCP: 35 tools discovered
+2025-12-03 15:45:35,237 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:45:35,237 - INFO - All MCP server connections closed
+2025-12-03 15:45:35,237 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 15:45:37,238 - INFO - Testing individual server: Call for Papers
+2025-12-03 15:45:37,239 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:45:37,239 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:45:37,685 - INFO - Discovering available tools from Call for Papers...
+2025-12-03 15:45:37,688 - INFO - Discovered 1 tools from Call for Papers
+2025-12-03 15:45:37,740 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:45:37,740 - INFO - Total tools discovered: 1
+2025-12-03 15:45:37,740 - INFO - Call for Papers: 1 tools discovered
+2025-12-03 15:45:37,741 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:45:37,741 - INFO - All MCP server connections closed
+2025-12-03 15:45:37,741 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 15:45:39,742 - INFO - Testing individual server: Car Price Evaluator
+2025-12-03 15:45:39,743 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:45:39,743 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:45:40,080 - INFO - Discovering available tools from Car Price Evaluator...
+2025-12-03 15:45:40,083 - INFO - Discovered 3 tools from Car Price Evaluator
+2025-12-03 15:45:40,129 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:45:40,129 - INFO - Total tools discovered: 3
+2025-12-03 15:45:40,129 - INFO - Car Price Evaluator: 3 tools discovered
+2025-12-03 15:45:40,130 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:45:40,130 - INFO - All MCP server connections closed
+2025-12-03 15:45:40,130 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 15:45:42,131 - INFO - Testing individual server: Context7
+2025-12-03 15:45:42,132 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:45:42,132 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:45:42,254 - INFO - Discovering available tools from Context7...
+2025-12-03 15:45:42,256 - INFO - Discovered 2 tools from Context7
+2025-12-03 15:45:42,259 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:45:42,259 - INFO - Total tools discovered: 2
+2025-12-03 15:45:42,259 - INFO - Context7: 2 tools discovered
+2025-12-03 15:45:42,259 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:45:42,259 - INFO - All MCP server connections closed
+2025-12-03 15:45:42,259 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 15:45:44,261 - INFO - Testing individual server: DEX Paprika
+2025-12-03 15:45:44,261 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:45:44,262 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:45:44,377 - INFO - Discovering available tools from DEX Paprika...
+2025-12-03 15:45:44,380 - INFO - Discovered 11 tools from DEX Paprika
+2025-12-03 15:45:44,383 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:45:44,383 - INFO - Total tools discovered: 11
+2025-12-03 15:45:44,383 - INFO - DEX Paprika: 11 tools discovered
+2025-12-03 15:45:44,383 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:45:44,383 - INFO - All MCP server connections closed
+2025-12-03 15:45:44,383 - INFO - Batch 2 complete: 5/5 servers, 52 tools
+2025-12-03 15:45:44,383 - INFO - Waiting 5.0s before next batch...
+2025-12-03 15:45:49,384 - INFO - Starting batch 3/6
+2025-12-03 15:45:49,385 - INFO - Processing batch 3 with 5 servers in INDIVIDUAL mode...
+2025-12-03 15:45:49,385 - INFO -    Servers in this batch: FruityVice, Game Trends, Huge Icons, Hugging Face, Math MCP
+2025-12-03 15:45:49,385 - INFO - Testing individual server: FruityVice
+2025-12-03 15:45:49,385 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:45:49,385 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:45:49,700 - INFO - Discovering available tools from FruityVice...
+2025-12-03 15:45:49,703 - INFO - Discovered 1 tools from FruityVice
+2025-12-03 15:45:49,745 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:45:49,745 - INFO - Total tools discovered: 1
+2025-12-03 15:45:49,745 - INFO - FruityVice: 1 tools discovered
+2025-12-03 15:45:49,745 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:45:49,745 - INFO - All MCP server connections closed
+2025-12-03 15:45:49,745 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 15:45:51,747 - INFO - Testing individual server: Game Trends
+2025-12-03 15:45:51,747 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:45:51,748 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:45:52,174 - INFO - Discovering available tools from Game Trends...
+2025-12-03 15:45:52,176 - INFO - Discovered 7 tools from Game Trends
+2025-12-03 15:45:52,236 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:45:52,236 - INFO - Total tools discovered: 7
+2025-12-03 15:45:52,236 - INFO - Game Trends: 7 tools discovered
+2025-12-03 15:45:52,236 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:45:52,236 - INFO - All MCP server connections closed
+2025-12-03 15:45:52,236 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 15:45:54,237 - INFO - Testing individual server: Huge Icons
+2025-12-03 15:45:54,238 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:45:54,239 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:45:54,377 - INFO - Discovering available tools from Huge Icons...
+2025-12-03 15:45:54,378 - INFO - Discovered 3 tools from Huge Icons
+2025-12-03 15:45:54,381 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:45:54,381 - INFO - Total tools discovered: 3
+2025-12-03 15:45:54,381 - INFO - Huge Icons: 3 tools discovered
+2025-12-03 15:45:54,381 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:45:54,381 - INFO - All MCP server connections closed
+2025-12-03 15:45:54,381 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 15:45:56,382 - INFO - Testing individual server: Hugging Face
+2025-12-03 15:45:56,383 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:45:56,384 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:45:56,776 - INFO - Discovering available tools from Hugging Face...
+2025-12-03 15:45:56,777 - INFO - Discovered 10 tools from Hugging Face
+2025-12-03 15:45:56,824 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:45:56,824 - INFO - Total tools discovered: 10
+2025-12-03 15:45:56,824 - INFO - Hugging Face: 10 tools discovered
+2025-12-03 15:45:56,824 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:45:56,824 - INFO - All MCP server connections closed
+2025-12-03 15:45:56,824 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 15:45:58,826 - INFO - Testing individual server: Math MCP
+2025-12-03 15:45:58,827 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:45:58,827 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:45:58,917 - INFO - Discovering available tools from Math MCP...
+2025-12-03 15:45:58,920 - INFO - Discovered 13 tools from Math MCP
+2025-12-03 15:45:58,922 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:45:58,922 - INFO - Total tools discovered: 13
+2025-12-03 15:45:58,922 - INFO - Math MCP: 13 tools discovered
+2025-12-03 15:45:58,922 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:45:58,922 - INFO - All MCP server connections closed
+2025-12-03 15:45:58,922 - INFO - Batch 3 complete: 5/5 servers, 34 tools
+2025-12-03 15:45:58,922 - INFO - Waiting 5.0s before next batch...
+2025-12-03 15:46:03,924 - INFO - Starting batch 4/6
+2025-12-03 15:46:03,926 - INFO - Processing batch 4 with 5 servers in INDIVIDUAL mode...
+2025-12-03 15:46:03,926 - INFO -    Servers in this batch: NixOS, OSINT Intelligence, Reddit, National Parks, Medical Calculator
+2025-12-03 15:46:03,926 - INFO - Testing individual server: NixOS
+2025-12-03 15:46:03,926 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:46:03,927 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:46:04,334 - INFO - Discovering available tools from NixOS...
+2025-12-03 15:46:04,338 - INFO - Discovered 18 tools from NixOS
+2025-12-03 15:46:04,390 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:46:04,390 - INFO - Total tools discovered: 18
+2025-12-03 15:46:04,390 - INFO - NixOS: 18 tools discovered
+2025-12-03 15:46:04,390 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:46:04,390 - INFO - All MCP server connections closed
+2025-12-03 15:46:04,390 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 15:46:06,392 - INFO - Testing individual server: OSINT Intelligence
+2025-12-03 15:46:06,392 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:46:06,393 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:46:06,816 - INFO - Discovering available tools from OSINT Intelligence...
+2025-12-03 15:46:06,818 - INFO - Discovered 7 tools from OSINT Intelligence
+2025-12-03 15:46:06,877 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:46:06,877 - INFO - Total tools discovered: 7
+2025-12-03 15:46:06,877 - INFO - OSINT Intelligence: 7 tools discovered
+2025-12-03 15:46:06,877 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:46:06,877 - INFO - All MCP server connections closed
+2025-12-03 15:46:06,877 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 15:46:08,878 - INFO - Testing individual server: Reddit
+2025-12-03 15:46:08,879 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:46:08,879 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:46:13,725 - ERROR - Error connecting to STDIO server Reddit: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 15:46:13,726 - ERROR - Full traceback:
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 93, in _connect_stdio_server
+  |     async with stdio_client(connector.server_params) as (read, write):
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/contextlib.py", line 217, in __aexit__
+  |     await self.gen.athrow(typ, value, traceback)
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/stdio/__init__.py", line 180, in stdio_client
+  |     async with (
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/stdio/__init__.py", line 187, in stdio_client
+    |     yield read_stream, write_stream
+    |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 94, in _connect_stdio_server
+    |     async with ClientSession(read, write) as session:
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/shared/session.py", line 218, in __aexit__
+    |     return await self._task_group.__aexit__(exc_type, exc_val, exc_tb)
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+    |     raise BaseExceptionGroup(
+    | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 95, in _connect_stdio_server
+      |     await session.initialize()
+      |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/session.py", line 151, in initialize
+      |     result = await self.send_request(
+      |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/shared/session.py", line 286, in send_request
+      |     raise McpError(response_or_error.error)
+      | mcp.shared.exceptions.McpError: Connection closed
+      +------------------------------------
+
+2025-12-03 15:46:13,726 - ERROR - Cause: None
+2025-12-03 15:46:13,726 - ERROR - Context: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 15:46:13,726 - ERROR - Sub-exception 1: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 15:46:13,726 - ERROR - Failed to connect to Reddit: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 15:46:13,726 - INFO - Successfully connected to 0/1 servers
+2025-12-03 15:46:13,726 - INFO - Total tools discovered: 0
+2025-12-03 15:46:13,726 - INFO - Reddit: 0 tools discovered
+2025-12-03 15:46:13,726 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:46:13,726 - INFO - All MCP server connections closed
+2025-12-03 15:46:13,726 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 15:46:15,728 - INFO - Testing individual server: National Parks
+2025-12-03 15:46:15,728 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:46:15,729 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:46:15,887 - INFO - Discovering available tools from National Parks...
+2025-12-03 15:46:15,889 - INFO - Discovered 6 tools from National Parks
+2025-12-03 15:46:15,895 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:46:15,895 - INFO - Total tools discovered: 6
+2025-12-03 15:46:15,895 - INFO - National Parks: 6 tools discovered
+2025-12-03 15:46:15,895 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:46:15,895 - INFO - All MCP server connections closed
+2025-12-03 15:46:15,895 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 15:46:17,897 - INFO - Testing individual server: Medical Calculator
+2025-12-03 15:46:17,897 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:46:17,897 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:46:19,329 - INFO - Discovering available tools from Medical Calculator...
+2025-12-03 15:46:19,332 - INFO - Discovered 22 tools from Medical Calculator
+2025-12-03 15:46:19,419 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:46:19,419 - INFO - Total tools discovered: 22
+2025-12-03 15:46:19,419 - INFO - Medical Calculator: 22 tools discovered
+2025-12-03 15:46:19,419 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:46:19,419 - INFO - All MCP server connections closed
+2025-12-03 15:46:19,419 - INFO - Batch 4 complete: 5/5 servers, 53 tools
+2025-12-03 15:46:19,419 - INFO - Waiting 5.0s before next batch...
+2025-12-03 15:46:24,421 - INFO - Starting batch 5/6
+2025-12-03 15:46:24,421 - INFO - Processing batch 5 with 5 servers in INDIVIDUAL mode...
+2025-12-03 15:46:24,421 - INFO -    Servers in this batch: Metropolitan Museum, Movie Recommender, NASA Data, OKX Exchange, Paper Search
+2025-12-03 15:46:24,422 - INFO - Testing individual server: Metropolitan Museum
+2025-12-03 15:46:24,422 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:46:24,422 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:46:24,580 - INFO - Discovering available tools from Metropolitan Museum...
+2025-12-03 15:46:24,583 - INFO - Discovered 3 tools from Metropolitan Museum
+2025-12-03 15:46:24,590 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:46:24,590 - INFO - Total tools discovered: 3
+2025-12-03 15:46:24,590 - INFO - Metropolitan Museum: 3 tools discovered
+2025-12-03 15:46:24,591 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:46:24,591 - INFO - All MCP server connections closed
+2025-12-03 15:46:24,591 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 15:46:26,592 - INFO - Testing individual server: Movie Recommender
+2025-12-03 15:46:26,593 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:46:26,593 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:46:26,950 - INFO - Discovering available tools from Movie Recommender...
+2025-12-03 15:46:26,953 - INFO - Discovered 1 tools from Movie Recommender
+2025-12-03 15:46:26,999 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:46:26,999 - INFO - Total tools discovered: 1
+2025-12-03 15:46:26,999 - INFO - Movie Recommender: 1 tools discovered
+2025-12-03 15:46:26,999 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:46:26,999 - INFO - All MCP server connections closed
+2025-12-03 15:46:26,999 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 15:46:29,001 - INFO - Testing individual server: NASA Data
+2025-12-03 15:46:29,001 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:46:29,002 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:46:29,393 - INFO - Discovering available tools from NASA Data...
+2025-12-03 15:46:29,395 - INFO - Discovered 21 tools from NASA Data
+2025-12-03 15:46:31,499 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:46:31,499 - INFO - Total tools discovered: 21
+2025-12-03 15:46:31,499 - INFO - NASA Data: 21 tools discovered
+2025-12-03 15:46:31,499 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:46:31,499 - INFO - All MCP server connections closed
+2025-12-03 15:46:31,500 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 15:46:33,501 - INFO - Testing individual server: OKX Exchange
+2025-12-03 15:46:33,502 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:46:33,502 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:46:33,645 - INFO - Discovering available tools from OKX Exchange...
+2025-12-03 15:46:33,647 - INFO - Discovered 2 tools from OKX Exchange
+2025-12-03 15:46:33,653 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:46:33,653 - INFO - Total tools discovered: 2
+2025-12-03 15:46:33,653 - INFO - OKX Exchange: 2 tools discovered
+2025-12-03 15:46:33,653 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:46:33,654 - INFO - All MCP server connections closed
+2025-12-03 15:46:33,654 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 15:46:35,655 - INFO - Testing individual server: Paper Search
+2025-12-03 15:46:35,655 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:46:35,655 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:46:36,242 - INFO - Discovering available tools from Paper Search...
+2025-12-03 15:46:36,245 - INFO - Discovered 19 tools from Paper Search
+2025-12-03 15:46:36,321 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:46:36,321 - INFO - Total tools discovered: 19
+2025-12-03 15:46:36,321 - INFO - Paper Search: 19 tools discovered
+2025-12-03 15:46:36,321 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:46:36,321 - INFO - All MCP server connections closed
+2025-12-03 15:46:36,321 - INFO - Batch 5 complete: 5/5 servers, 46 tools
+2025-12-03 15:46:36,321 - INFO - Waiting 5.0s before next batch...
+2025-12-03 15:46:41,323 - INFO - Starting batch 6/6
+2025-12-03 15:46:41,323 - INFO - Processing batch 6 with 3 servers in INDIVIDUAL mode...
+2025-12-03 15:46:41,323 - INFO -    Servers in this batch: Scientific Computing, Weather Data, Time MCP
+2025-12-03 15:46:41,324 - INFO - Testing individual server: Scientific Computing
+2025-12-03 15:46:41,324 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:46:41,324 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:46:42,157 - INFO - Discovering available tools from Scientific Computing...
+2025-12-03 15:46:42,161 - INFO - Discovered 26 tools from Scientific Computing
+2025-12-03 15:46:42,274 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:46:42,275 - INFO - Total tools discovered: 26
+2025-12-03 15:46:42,275 - INFO - Scientific Computing: 26 tools discovered
+2025-12-03 15:46:42,275 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:46:42,275 - INFO - All MCP server connections closed
+2025-12-03 15:46:42,275 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 15:46:44,276 - INFO - Testing individual server: Weather Data
+2025-12-03 15:46:44,277 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:46:44,277 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:46:44,643 - INFO - Discovering available tools from Weather Data...
+2025-12-03 15:46:44,647 - INFO - Discovered 4 tools from Weather Data
+2025-12-03 15:46:44,741 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:46:44,742 - INFO - Total tools discovered: 4
+2025-12-03 15:46:44,742 - INFO - Weather Data: 4 tools discovered
+2025-12-03 15:46:44,742 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:46:44,742 - INFO - All MCP server connections closed
+2025-12-03 15:46:44,742 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 15:46:46,750 - INFO - Testing individual server: Time MCP
+2025-12-03 15:46:46,751 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 15:46:46,752 - INFO - Connecting to 1 MCP servers...
+2025-12-03 15:46:47,075 - INFO - Discovering available tools from Time MCP...
+2025-12-03 15:46:47,076 - INFO - Discovered 2 tools from Time MCP
+2025-12-03 15:46:47,130 - INFO - Successfully connected to 1/1 servers
+2025-12-03 15:46:47,130 - INFO - Total tools discovered: 2
+2025-12-03 15:46:47,130 - INFO - Time MCP: 2 tools discovered
+2025-12-03 15:46:47,130 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 15:46:47,130 - INFO - All MCP server connections closed
+2025-12-03 15:46:47,130 - INFO - Batch 6 complete: 3/3 servers, 32 tools
+2025-12-03 15:46:47,130 - INFO - Collection complete: 28/28 servers connected, 246 tools discovered
+2025-12-03 15:46:47,140 - INFO - Data saved to /Users/chetan/projects/mcp-bench/mcp_servers_info.json
+2025-12-03 15:46:47,147 - INFO - Markdown documentation saved to /Users/chetan/projects/mcp-bench/mcp_servers_info.md
+2025-12-03 16:43:03,379 - INFO - Loaded 28 local server configurations
+2025-12-03 16:43:03,380 - INFO - Loaded 5 API keys
+2025-12-03 16:43:03,380 - INFO - Starting MCP server information collection in INDIVIDUAL mode...
+2025-12-03 16:43:03,380 - INFO - Added Node.js path to environment: /Users/zhenting.wang/.nvm/versions/node/v22.16.0/bin
+2025-12-03 16:43:03,380 - INFO - Loading local server configurations...
+2025-12-03 16:43:03,380 - INFO - Loaded 28 server configurations
+2025-12-03 16:43:03,380 - INFO - Starting batch 1/6
+2025-12-03 16:43:03,380 - INFO - Processing batch 1 with 5 servers in INDIVIDUAL mode...
+2025-12-03 16:43:03,380 - INFO -    Servers in this batch: OpenAPI Explorer, Unit Converter, Wikipedia, Google Maps, Bibliomantic
+2025-12-03 16:43:03,380 - INFO - Testing individual server: OpenAPI Explorer
+2025-12-03 16:43:03,380 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:43:03,380 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:43:03,622 - INFO - Discovering available tools from OpenAPI Explorer...
+2025-12-03 16:43:03,932 - INFO - Discovered 2 tools from OpenAPI Explorer
+2025-12-03 16:43:03,949 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:43:03,949 - INFO - Total tools discovered: 2
+2025-12-03 16:43:03,950 - INFO - OpenAPI Explorer: 2 tools discovered
+2025-12-03 16:43:03,950 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:43:03,950 - INFO - All MCP server connections closed
+2025-12-03 16:43:03,950 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 16:43:05,953 - INFO - Testing individual server: Unit Converter
+2025-12-03 16:43:05,954 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:43:05,957 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:43:06,603 - INFO - Discovering available tools from Unit Converter...
+2025-12-03 16:43:06,606 - INFO - Discovered 16 tools from Unit Converter
+2025-12-03 16:43:06,671 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:43:06,671 - INFO - Total tools discovered: 16
+2025-12-03 16:43:06,671 - INFO - Unit Converter: 16 tools discovered
+2025-12-03 16:43:06,671 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:43:06,671 - INFO - All MCP server connections closed
+2025-12-03 16:43:06,671 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 16:43:08,672 - INFO - Testing individual server: Wikipedia
+2025-12-03 16:43:08,673 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:43:08,674 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:43:13,344 - ERROR - Error connecting to STDIO server Wikipedia: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 16:43:13,347 - ERROR - Full traceback:
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 93, in _connect_stdio_server
+  |     async with stdio_client(connector.server_params) as (read, write):
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/contextlib.py", line 217, in __aexit__
+  |     await self.gen.athrow(typ, value, traceback)
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/stdio/__init__.py", line 180, in stdio_client
+  |     async with (
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/stdio/__init__.py", line 187, in stdio_client
+    |     yield read_stream, write_stream
+    |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 94, in _connect_stdio_server
+    |     async with ClientSession(read, write) as session:
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/shared/session.py", line 218, in __aexit__
+    |     return await self._task_group.__aexit__(exc_type, exc_val, exc_tb)
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+    |     raise BaseExceptionGroup(
+    | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 95, in _connect_stdio_server
+      |     await session.initialize()
+      |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/session.py", line 151, in initialize
+      |     result = await self.send_request(
+      |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/shared/session.py", line 286, in send_request
+      |     raise McpError(response_or_error.error)
+      | mcp.shared.exceptions.McpError: Connection closed
+      +------------------------------------
+
+2025-12-03 16:43:13,348 - ERROR - Cause: None
+2025-12-03 16:43:13,348 - ERROR - Context: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 16:43:13,348 - ERROR - Sub-exception 1: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 16:43:13,348 - ERROR - Failed to connect to Wikipedia: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 16:43:13,348 - INFO - Successfully connected to 0/1 servers
+2025-12-03 16:43:13,348 - INFO - Total tools discovered: 0
+2025-12-03 16:43:13,348 - INFO - Wikipedia: 0 tools discovered
+2025-12-03 16:43:13,348 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:43:13,348 - INFO - All MCP server connections closed
+2025-12-03 16:43:13,348 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 16:43:15,350 - INFO - Testing individual server: Google Maps
+2025-12-03 16:43:15,350 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:43:15,351 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:43:15,351 - INFO - Connecting to Google Maps with HTTP transport on port 3001
+2025-12-03 16:43:15,351 - INFO - Starting with configured port 3001 for Google Maps
+2025-12-03 16:43:15,351 - INFO - Attempt 1: Trying configured port 3001 for Google Maps
+2025-12-03 16:43:15,352 - INFO - Command: node dist/cli.js --port 3001
+2025-12-03 16:43:18,389 - INFO - Successfully started HTTP server for Google Maps on port 3001
+2025-12-03 16:43:18,411 - INFO - Discovered 7 tools from HTTP server Google Maps
+2025-12-03 16:43:18,412 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:43:18,412 - INFO - Total tools discovered: 7
+2025-12-03 16:43:18,412 - INFO - Google Maps: 7 tools discovered
+2025-12-03 16:43:18,412 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:43:18,412 - INFO - Scheduling cleanup for HTTP server Google Maps
+2025-12-03 16:43:18,412 - INFO - Waiting for 1 HTTP servers to shutdown...
+2025-12-03 16:43:18,412 - INFO - Stopping HTTP server for Google Maps (PID: 23235, Port: 3001)
+2025-12-03 16:43:21,414 - INFO - HTTP server process 23235 for Google Maps has exited
+2025-12-03 16:43:22,416 - INFO - Port 3001 successfully released for Google Maps
+2025-12-03 16:43:22,417 - INFO - All MCP server connections closed
+2025-12-03 16:43:22,418 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 16:43:24,419 - INFO - Testing individual server: Bibliomantic
+2025-12-03 16:43:24,420 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:43:24,420 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:43:24,801 - INFO - Discovering available tools from Bibliomantic...
+2025-12-03 16:43:24,803 - INFO - Discovered 4 tools from Bibliomantic
+2025-12-03 16:43:24,847 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:43:24,847 - INFO - Total tools discovered: 4
+2025-12-03 16:43:24,847 - INFO - Bibliomantic: 4 tools discovered
+2025-12-03 16:43:24,847 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:43:24,847 - INFO - All MCP server connections closed
+2025-12-03 16:43:24,847 - INFO - Batch 1 complete: 5/5 servers, 29 tools
+2025-12-03 16:43:24,847 - INFO - Waiting 5.0s before next batch...
+2025-12-03 16:43:29,848 - INFO - Starting batch 2/6
+2025-12-03 16:43:29,850 - INFO - Processing batch 2 with 5 servers in INDIVIDUAL mode...
+2025-12-03 16:43:29,850 - INFO -    Servers in this batch: BioMCP, Call for Papers, Car Price Evaluator, Context7, DEX Paprika
+2025-12-03 16:43:29,850 - INFO - Testing individual server: BioMCP
+2025-12-03 16:43:29,850 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:43:29,851 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:43:31,001 - INFO - Discovering available tools from BioMCP...
+2025-12-03 16:43:31,014 - INFO - Discovered 35 tools from BioMCP
+2025-12-03 16:43:31,106 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:43:31,106 - INFO - Total tools discovered: 35
+2025-12-03 16:43:31,106 - INFO - BioMCP: 35 tools discovered
+2025-12-03 16:43:31,106 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:43:31,107 - INFO - All MCP server connections closed
+2025-12-03 16:43:31,107 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 16:43:33,108 - INFO - Testing individual server: Call for Papers
+2025-12-03 16:43:33,109 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:43:33,109 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:43:33,608 - INFO - Discovering available tools from Call for Papers...
+2025-12-03 16:43:33,611 - INFO - Discovered 1 tools from Call for Papers
+2025-12-03 16:43:33,663 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:43:33,663 - INFO - Total tools discovered: 1
+2025-12-03 16:43:33,663 - INFO - Call for Papers: 1 tools discovered
+2025-12-03 16:43:33,663 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:43:33,663 - INFO - All MCP server connections closed
+2025-12-03 16:43:33,663 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 16:43:35,665 - INFO - Testing individual server: Car Price Evaluator
+2025-12-03 16:43:35,665 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:43:35,666 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:43:36,014 - INFO - Discovering available tools from Car Price Evaluator...
+2025-12-03 16:43:36,017 - INFO - Discovered 3 tools from Car Price Evaluator
+2025-12-03 16:43:36,062 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:43:36,062 - INFO - Total tools discovered: 3
+2025-12-03 16:43:36,062 - INFO - Car Price Evaluator: 3 tools discovered
+2025-12-03 16:43:36,062 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:43:36,062 - INFO - All MCP server connections closed
+2025-12-03 16:43:36,062 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 16:43:38,066 - INFO - Testing individual server: Context7
+2025-12-03 16:43:38,067 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:43:38,068 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:43:38,194 - INFO - Discovering available tools from Context7...
+2025-12-03 16:43:38,196 - INFO - Discovered 2 tools from Context7
+2025-12-03 16:43:38,200 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:43:38,200 - INFO - Total tools discovered: 2
+2025-12-03 16:43:38,200 - INFO - Context7: 2 tools discovered
+2025-12-03 16:43:38,200 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:43:38,200 - INFO - All MCP server connections closed
+2025-12-03 16:43:38,200 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 16:43:40,202 - INFO - Testing individual server: DEX Paprika
+2025-12-03 16:43:40,202 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:43:40,203 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:43:40,320 - INFO - Discovering available tools from DEX Paprika...
+2025-12-03 16:43:40,322 - INFO - Discovered 11 tools from DEX Paprika
+2025-12-03 16:43:40,326 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:43:40,326 - INFO - Total tools discovered: 11
+2025-12-03 16:43:40,326 - INFO - DEX Paprika: 11 tools discovered
+2025-12-03 16:43:40,326 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:43:40,326 - INFO - All MCP server connections closed
+2025-12-03 16:43:40,326 - INFO - Batch 2 complete: 5/5 servers, 52 tools
+2025-12-03 16:43:40,326 - INFO - Waiting 5.0s before next batch...
+2025-12-03 16:43:45,328 - INFO - Starting batch 3/6
+2025-12-03 16:43:45,329 - INFO - Processing batch 3 with 5 servers in INDIVIDUAL mode...
+2025-12-03 16:43:45,329 - INFO -    Servers in this batch: FruityVice, Game Trends, Huge Icons, Hugging Face, Math MCP
+2025-12-03 16:43:45,329 - INFO - Testing individual server: FruityVice
+2025-12-03 16:43:45,330 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:43:45,330 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:43:45,682 - INFO - Discovering available tools from FruityVice...
+2025-12-03 16:43:45,686 - INFO - Discovered 1 tools from FruityVice
+2025-12-03 16:43:45,728 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:43:45,728 - INFO - Total tools discovered: 1
+2025-12-03 16:43:45,728 - INFO - FruityVice: 1 tools discovered
+2025-12-03 16:43:45,728 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:43:45,728 - INFO - All MCP server connections closed
+2025-12-03 16:43:45,728 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 16:43:47,730 - INFO - Testing individual server: Game Trends
+2025-12-03 16:43:47,730 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:43:47,730 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:43:48,147 - INFO - Discovering available tools from Game Trends...
+2025-12-03 16:43:48,149 - INFO - Discovered 7 tools from Game Trends
+2025-12-03 16:43:48,211 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:43:48,211 - INFO - Total tools discovered: 7
+2025-12-03 16:43:48,211 - INFO - Game Trends: 7 tools discovered
+2025-12-03 16:43:48,212 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:43:48,212 - INFO - All MCP server connections closed
+2025-12-03 16:43:48,212 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 16:43:50,213 - INFO - Testing individual server: Huge Icons
+2025-12-03 16:43:50,214 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:43:50,214 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:43:50,356 - INFO - Discovering available tools from Huge Icons...
+2025-12-03 16:43:50,357 - INFO - Discovered 3 tools from Huge Icons
+2025-12-03 16:43:50,360 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:43:50,360 - INFO - Total tools discovered: 3
+2025-12-03 16:43:50,360 - INFO - Huge Icons: 3 tools discovered
+2025-12-03 16:43:50,360 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:43:50,360 - INFO - All MCP server connections closed
+2025-12-03 16:43:50,360 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 16:43:52,361 - INFO - Testing individual server: Hugging Face
+2025-12-03 16:43:52,362 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:43:52,363 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:43:52,853 - INFO - Discovering available tools from Hugging Face...
+2025-12-03 16:43:52,855 - INFO - Discovered 10 tools from Hugging Face
+2025-12-03 16:43:52,905 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:43:52,905 - INFO - Total tools discovered: 10
+2025-12-03 16:43:52,906 - INFO - Hugging Face: 10 tools discovered
+2025-12-03 16:43:52,906 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:43:52,906 - INFO - All MCP server connections closed
+2025-12-03 16:43:52,906 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 16:43:54,907 - INFO - Testing individual server: Math MCP
+2025-12-03 16:43:54,908 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:43:54,908 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:43:55,002 - INFO - Discovering available tools from Math MCP...
+2025-12-03 16:43:55,004 - INFO - Discovered 13 tools from Math MCP
+2025-12-03 16:43:55,006 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:43:55,006 - INFO - Total tools discovered: 13
+2025-12-03 16:43:55,006 - INFO - Math MCP: 13 tools discovered
+2025-12-03 16:43:55,006 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:43:55,006 - INFO - All MCP server connections closed
+2025-12-03 16:43:55,006 - INFO - Batch 3 complete: 5/5 servers, 34 tools
+2025-12-03 16:43:55,006 - INFO - Waiting 5.0s before next batch...
+2025-12-03 16:44:00,008 - INFO - Starting batch 4/6
+2025-12-03 16:44:00,008 - INFO - Processing batch 4 with 5 servers in INDIVIDUAL mode...
+2025-12-03 16:44:00,009 - INFO -    Servers in this batch: NixOS, OSINT Intelligence, Reddit, National Parks, Medical Calculator
+2025-12-03 16:44:00,009 - INFO - Testing individual server: NixOS
+2025-12-03 16:44:00,009 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:44:00,009 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:44:00,410 - INFO - Discovering available tools from NixOS...
+2025-12-03 16:44:00,413 - INFO - Discovered 18 tools from NixOS
+2025-12-03 16:44:00,466 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:44:00,466 - INFO - Total tools discovered: 18
+2025-12-03 16:44:00,466 - INFO - NixOS: 18 tools discovered
+2025-12-03 16:44:00,466 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:44:00,466 - INFO - All MCP server connections closed
+2025-12-03 16:44:00,466 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 16:44:02,467 - INFO - Testing individual server: OSINT Intelligence
+2025-12-03 16:44:02,468 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:44:02,469 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:44:02,903 - INFO - Discovering available tools from OSINT Intelligence...
+2025-12-03 16:44:02,905 - INFO - Discovered 7 tools from OSINT Intelligence
+2025-12-03 16:44:02,963 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:44:02,963 - INFO - Total tools discovered: 7
+2025-12-03 16:44:02,963 - INFO - OSINT Intelligence: 7 tools discovered
+2025-12-03 16:44:02,963 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:44:02,963 - INFO - All MCP server connections closed
+2025-12-03 16:44:02,963 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 16:44:04,964 - INFO - Testing individual server: Reddit
+2025-12-03 16:44:04,965 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:44:04,965 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:44:09,756 - ERROR - Error connecting to STDIO server Reddit: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 16:44:09,757 - ERROR - Full traceback:
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 93, in _connect_stdio_server
+  |     async with stdio_client(connector.server_params) as (read, write):
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/contextlib.py", line 217, in __aexit__
+  |     await self.gen.athrow(typ, value, traceback)
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/stdio/__init__.py", line 180, in stdio_client
+  |     async with (
+  |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Exception Group Traceback (most recent call last):
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/stdio/__init__.py", line 187, in stdio_client
+    |     yield read_stream, write_stream
+    |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 94, in _connect_stdio_server
+    |     async with ClientSession(read, write) as session:
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/shared/session.py", line 218, in __aexit__
+    |     return await self._task_group.__aexit__(exc_type, exc_val, exc_tb)
+    |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 783, in __aexit__
+    |     raise BaseExceptionGroup(
+    | exceptiongroup.ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+    +-+---------------- 1 ----------------
+      | Traceback (most recent call last):
+      |   File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager.py", line 95, in _connect_stdio_server
+      |     await session.initialize()
+      |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/session.py", line 151, in initialize
+      |     result = await self.send_request(
+      |   File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/shared/session.py", line 286, in send_request
+      |     raise McpError(response_or_error.error)
+      | mcp.shared.exceptions.McpError: Connection closed
+      +------------------------------------
+
+2025-12-03 16:44:09,758 - ERROR - Cause: None
+2025-12-03 16:44:09,758 - ERROR - Context: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 16:44:09,758 - ERROR - Sub-exception 1: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 16:44:09,758 - ERROR - Failed to connect to Reddit: unhandled errors in a TaskGroup (1 sub-exception)
+2025-12-03 16:44:09,758 - INFO - Successfully connected to 0/1 servers
+2025-12-03 16:44:09,758 - INFO - Total tools discovered: 0
+2025-12-03 16:44:09,758 - INFO - Reddit: 0 tools discovered
+2025-12-03 16:44:09,758 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:44:09,758 - INFO - All MCP server connections closed
+2025-12-03 16:44:09,758 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 16:44:11,760 - INFO - Testing individual server: National Parks
+2025-12-03 16:44:11,761 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:44:11,761 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:44:11,924 - INFO - Discovering available tools from National Parks...
+2025-12-03 16:44:11,926 - INFO - Discovered 6 tools from National Parks
+2025-12-03 16:44:11,933 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:44:11,933 - INFO - Total tools discovered: 6
+2025-12-03 16:44:11,934 - INFO - National Parks: 6 tools discovered
+2025-12-03 16:44:11,934 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:44:11,934 - INFO - All MCP server connections closed
+2025-12-03 16:44:11,934 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 16:44:13,935 - INFO - Testing individual server: Medical Calculator
+2025-12-03 16:44:13,936 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:44:13,936 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:44:15,459 - INFO - Discovering available tools from Medical Calculator...
+2025-12-03 16:44:15,462 - INFO - Discovered 22 tools from Medical Calculator
+2025-12-03 16:44:15,549 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:44:15,550 - INFO - Total tools discovered: 22
+2025-12-03 16:44:15,550 - INFO - Medical Calculator: 22 tools discovered
+2025-12-03 16:44:15,550 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:44:15,550 - INFO - All MCP server connections closed
+2025-12-03 16:44:15,550 - INFO - Batch 4 complete: 5/5 servers, 53 tools
+2025-12-03 16:44:15,550 - INFO - Waiting 5.0s before next batch...
+2025-12-03 16:44:20,551 - INFO - Starting batch 5/6
+2025-12-03 16:44:20,552 - INFO - Processing batch 5 with 5 servers in INDIVIDUAL mode...
+2025-12-03 16:44:20,552 - INFO -    Servers in this batch: Metropolitan Museum, Movie Recommender, NASA Data, OKX Exchange, Paper Search
+2025-12-03 16:44:20,552 - INFO - Testing individual server: Metropolitan Museum
+2025-12-03 16:44:20,552 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:44:20,553 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:44:20,709 - INFO - Discovering available tools from Metropolitan Museum...
+2025-12-03 16:44:20,712 - INFO - Discovered 3 tools from Metropolitan Museum
+2025-12-03 16:44:20,720 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:44:20,720 - INFO - Total tools discovered: 3
+2025-12-03 16:44:20,720 - INFO - Metropolitan Museum: 3 tools discovered
+2025-12-03 16:44:20,720 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:44:20,720 - INFO - All MCP server connections closed
+2025-12-03 16:44:20,720 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 16:44:22,722 - INFO - Testing individual server: Movie Recommender
+2025-12-03 16:44:22,722 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:44:22,722 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:44:23,038 - INFO - Discovering available tools from Movie Recommender...
+2025-12-03 16:44:23,041 - INFO - Discovered 1 tools from Movie Recommender
+2025-12-03 16:44:23,087 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:44:23,087 - INFO - Total tools discovered: 1
+2025-12-03 16:44:23,087 - INFO - Movie Recommender: 1 tools discovered
+2025-12-03 16:44:23,087 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:44:23,087 - INFO - All MCP server connections closed
+2025-12-03 16:44:23,087 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 16:44:25,089 - INFO - Testing individual server: NASA Data
+2025-12-03 16:44:25,089 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:44:25,090 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:44:25,469 - INFO - Discovering available tools from NASA Data...
+2025-12-03 16:44:25,471 - INFO - Discovered 21 tools from NASA Data
+2025-12-03 16:44:27,575 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:44:27,576 - INFO - Total tools discovered: 21
+2025-12-03 16:44:27,576 - INFO - NASA Data: 21 tools discovered
+2025-12-03 16:44:27,577 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:44:27,577 - INFO - All MCP server connections closed
+2025-12-03 16:44:27,577 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 16:44:29,578 - INFO - Testing individual server: OKX Exchange
+2025-12-03 16:44:29,579 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:44:29,580 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:44:29,722 - INFO - Discovering available tools from OKX Exchange...
+2025-12-03 16:44:29,723 - INFO - Discovered 2 tools from OKX Exchange
+2025-12-03 16:44:29,726 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:44:29,726 - INFO - Total tools discovered: 2
+2025-12-03 16:44:29,726 - INFO - OKX Exchange: 2 tools discovered
+2025-12-03 16:44:29,726 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:44:29,726 - INFO - All MCP server connections closed
+2025-12-03 16:44:29,726 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 16:44:31,728 - INFO - Testing individual server: Paper Search
+2025-12-03 16:44:31,729 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:44:31,729 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:44:32,315 - INFO - Discovering available tools from Paper Search...
+2025-12-03 16:44:32,318 - INFO - Discovered 19 tools from Paper Search
+2025-12-03 16:44:32,394 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:44:32,394 - INFO - Total tools discovered: 19
+2025-12-03 16:44:32,394 - INFO - Paper Search: 19 tools discovered
+2025-12-03 16:44:32,394 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:44:32,394 - INFO - All MCP server connections closed
+2025-12-03 16:44:32,394 - INFO - Batch 5 complete: 5/5 servers, 46 tools
+2025-12-03 16:44:32,394 - INFO - Waiting 5.0s before next batch...
+2025-12-03 16:44:37,395 - INFO - Starting batch 6/6
+2025-12-03 16:44:37,396 - INFO - Processing batch 6 with 3 servers in INDIVIDUAL mode...
+2025-12-03 16:44:37,396 - INFO -    Servers in this batch: Scientific Computing, Weather Data, Time MCP
+2025-12-03 16:44:37,397 - INFO - Testing individual server: Scientific Computing
+2025-12-03 16:44:37,397 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:44:37,397 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:44:38,304 - INFO - Discovering available tools from Scientific Computing...
+2025-12-03 16:44:38,308 - INFO - Discovered 26 tools from Scientific Computing
+2025-12-03 16:44:38,422 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:44:38,422 - INFO - Total tools discovered: 26
+2025-12-03 16:44:38,422 - INFO - Scientific Computing: 26 tools discovered
+2025-12-03 16:44:38,422 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:44:38,422 - INFO - All MCP server connections closed
+2025-12-03 16:44:38,422 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 16:44:40,424 - INFO - Testing individual server: Weather Data
+2025-12-03 16:44:40,424 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:44:40,424 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:44:40,898 - INFO - Discovering available tools from Weather Data...
+2025-12-03 16:44:40,909 - INFO - Discovered 4 tools from Weather Data
+2025-12-03 16:44:40,996 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:44:40,996 - INFO - Total tools discovered: 4
+2025-12-03 16:44:40,996 - INFO - Weather Data: 4 tools discovered
+2025-12-03 16:44:40,996 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:44:40,996 - INFO - All MCP server connections closed
+2025-12-03 16:44:40,996 - INFO - Waiting 2.0s before testing next server...
+2025-12-03 16:44:42,997 - INFO - Testing individual server: Time MCP
+2025-12-03 16:44:42,998 - INFO - MultiServerManager initialized with 1 server configurations
+2025-12-03 16:44:42,998 - INFO - Connecting to 1 MCP servers...
+2025-12-03 16:44:43,416 - INFO - Discovering available tools from Time MCP...
+2025-12-03 16:44:43,417 - INFO - Discovered 2 tools from Time MCP
+2025-12-03 16:44:43,505 - INFO - Successfully connected to 1/1 servers
+2025-12-03 16:44:43,506 - INFO - Total tools discovered: 2
+2025-12-03 16:44:43,506 - INFO - Time MCP: 2 tools discovered
+2025-12-03 16:44:43,506 - INFO - Closing connections to 1 MCP servers...
+2025-12-03 16:44:43,506 - INFO - All MCP server connections closed
+2025-12-03 16:44:43,506 - INFO - Batch 6 complete: 3/3 servers, 32 tools
+2025-12-03 16:44:43,506 - INFO - Collection complete: 28/28 servers connected, 246 tools discovered
+2025-12-03 16:44:43,516 - INFO - Data saved to /Users/chetan/projects/mcp-bench/mcp_servers_info.json
+2025-12-03 16:44:43,526 - INFO - Markdown documentation saved to /Users/chetan/projects/mcp-bench/mcp_servers_info.md

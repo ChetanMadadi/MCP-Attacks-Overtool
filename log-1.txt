@@ -1,0 +1,881 @@
+      PYO3_PYTHON="/Users/chetan/.cache/uv/builds-v0/.tmpNuqpRL/bin/python"
+      PYTHON_SYS_EXECUTABLE="/Users/chetan/.cache/uv/builds-v0/.tmpNuqpRL/bin/python" "cargo" "rustc" "--profile"
+      "release" "--features" "pyo3/extension-module" "--message-format" "json-render-diagnostics" "--manifest-path"
+      "/Users/chetan/.cache/uv/sdists-v9/pypi/pydantic-core/2.33.2/UAhWLKDrwQJtKUkPwiGHn/src/Cargo.toml"
+      "--lib" "--crate-type" "cdylib" "--" "-C" "link-arg=-undefined" "-C" "link-arg=dynamic_lookup" "-C"
+      "link-args=-Wl,-install_name,@rpath/pydantic_core._pydantic_core.cpython-314-darwin.so"`
+      Error: command ['maturin', 'pep517', 'build-wheel', '-i', '/Users/chetan/.cache/uv/builds-v0/.tmpNuqpRL/bin/python',
+      '--compatibility', 'off'] returned non-zero exit status 1
+
+      hint: This usually indicates a problem with the package or the build environment.
+  help: `pydantic-core` (v2.33.2) was included because `mcp-reddit-server` (v0.1.0) depends on `fastmcp` (v2.10.6) which depends on
+        `pydantic` (v2.11.7) which depends on `pydantic-core`
+2025-11-30 21:40:26,288 - mcp_modules.server_manager_persistent - ERROR - ERROR in connecting to STDIO server Reddit: Connection closed
+2025-11-30 21:40:26,289 - mcp_modules.server_manager_persistent - ERROR - Full traceback: Traceback (most recent call last):
+  File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager_persistent.py", line 160, in _connect_stdio_server_persistent
+    await session.initialize()
+  File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/session.py", line 151, in initialize
+    result = await self.send_request(
+  File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/shared/session.py", line 286, in send_request
+    raise McpError(response_or_error.error)
+mcp.shared.exceptions.McpError: Connection closed
+
+2025-11-30 21:40:26,289 - mcp_modules.server_manager_persistent - ERROR - ERROR in connecting to Reddit: Connection closed
+2025-11-30 21:40:26,289 - mcp_modules.server_manager_persistent - ERROR - Full traceback: Traceback (most recent call last):
+  File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager_persistent.py", line 107, in connect_all_servers
+    result = await self._connect_single_server(server_name)
+  File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager_persistent.py", line 145, in _connect_single_server
+    return await self._connect_stdio_server_persistent(server_name)
+  File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager_persistent.py", line 160, in _connect_stdio_server_persistent
+    await session.initialize()
+  File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/session.py", line 151, in initialize
+    result = await self.send_request(
+  File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/shared/session.py", line 286, in send_request
+    raise McpError(response_or_error.error)
+mcp.shared.exceptions.McpError: Connection closed
+
+2025-11-30 21:40:26,289 - mcp_modules.server_manager_persistent - INFO - Creating persistent connection to Time MCP...
+2025-11-30 21:40:26,702 - mcp_modules.connector - INFO - Discovering available tools from Time MCP...
+2025-11-30 21:40:26,704 - mcp_modules.connector - INFO - Discovered 2 tools from Time MCP
+2025-11-30 21:40:26,704 - mcp_modules.server_manager_persistent - INFO - Persistent session established for Time MCP with 2 tools
+2025-11-30 21:40:26,704 - mcp_modules.server_manager_persistent - INFO - Creating persistent connection to Bibliomantic...
+2025-11-30 21:40:26,967 - enhanced_divination - INFO - Enhanced BiblioMantic Divination System initialized
+2025-11-30 21:40:26,967 - enhanced_bibliomantic_server - INFO - Enhanced Bibliomantic FastMCP Server initialized with full traditional content
+2025-11-30 21:40:26,972 - __main__ - INFO - Loaded Enhanced Bibliomantic MCP Server with traditional I Ching content
+2025-11-30 21:40:26,977 - mcp_modules.connector - INFO - Discovering available tools from Bibliomantic...
+2025-11-30 21:40:26,978 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-30 21:40:26,979 - mcp_modules.connector - INFO - Discovered 4 tools from Bibliomantic
+2025-11-30 21:40:26,979 - mcp_modules.server_manager_persistent - INFO - Persistent session established for Bibliomantic with 4 tools
+2025-11-30 21:40:26,979 - mcp_modules.server_manager_persistent - INFO - Creating persistent connection to Context7...
+Context7 Documentation MCP Server running on stdio
+2025-11-30 21:40:27,131 - mcp_modules.connector - INFO - Discovering available tools from Context7...
+2025-11-30 21:40:27,133 - mcp_modules.connector - INFO - Discovered 2 tools from Context7
+2025-11-30 21:40:27,133 - mcp_modules.server_manager_persistent - INFO - Persistent session established for Context7 with 2 tools
+2025-11-30 21:40:27,133 - mcp_modules.server_manager_persistent - INFO - Creating persistent connection to DEX Paprika...
+DexPaprika MCP server is running...
+2025-11-30 21:40:27,209 - mcp_modules.connector - INFO - Discovering available tools from DEX Paprika...
+2025-11-30 21:40:27,211 - mcp_modules.connector - INFO - Discovered 11 tools from DEX Paprika
+2025-11-30 21:40:27,211 - mcp_modules.server_manager_persistent - INFO - Persistent session established for DEX Paprika with 11 tools
+2025-11-30 21:40:27,211 - mcp_modules.server_manager_persistent - INFO - Connecting to Google Maps with HTTP transport on port 3001
+2025-11-30 21:40:27,212 - mcp_modules.connector - INFO - Starting with configured port 3001 for Google Maps
+2025-11-30 21:40:27,212 - mcp_modules.connector - INFO - Attempt 1: Trying configured port 3001 for Google Maps
+2025-11-30 21:40:27,212 - mcp_modules.connector - INFO - Command: node dist/cli.js --port 3001
+2025-11-30 21:40:30,236 - mcp_modules.connector - INFO - Successfully started HTTP server for Google Maps on port 3001
+2025-11-30 21:40:30,262 - mcp_modules.connector - INFO - Discovered 7 tools from HTTP server Google Maps
+2025-11-30 21:40:30,262 - mcp_modules.server_manager_persistent - INFO - Creating persistent connection to NASA Data...
+2025-11-30 21:40:30,625 - mcp_modules.connector - INFO - Discovering available tools from NASA Data...
+2025-11-30 21:40:30,626 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-11-30 21:40:30,627 - mcp_modules.connector - INFO - Discovered 21 tools from NASA Data
+2025-11-30 21:40:30,627 - mcp_modules.server_manager_persistent - INFO - Persistent session established for NASA Data with 21 tools
+2025-11-30 21:40:30,627 - mcp_modules.server_manager_persistent - INFO - Creating persistent connection to OpenAPI Explorer...
+2025-11-30 21:40:30,725 - mcp_modules.connector - INFO - Discovering available tools from OpenAPI Explorer...
+2025-11-30 21:40:31,008 - mcp_modules.connector - INFO - Discovered 2 tools from OpenAPI Explorer
+2025-11-30 21:40:31,008 - mcp_modules.server_manager_persistent - INFO - Persistent session established for OpenAPI Explorer with 2 tools
+2025-11-30 21:40:31,008 - mcp_modules.server_manager_persistent - INFO - Creating persistent connection to Paper Search...
+/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/PyPDF2/__init__.py:21: DeprecationWarning: PyPDF2 is deprecated. Please move to the pypdf library instead.
+  warnings.warn(
+
+
+╭────────────────────────────────────────────────────────────────────────────╮
+│                                                                            │
+│        _ __ ___  _____           __  __  _____________    ____    ____     │
+│       _ __ ___ .'____/___ ______/ /_/  |/  / ____/ __ \  |___ \  / __ \    │
+│      _ __ ___ / /_  / __ `/ ___/ __/ /|_/ / /   / /_/ /  ___/ / / / / /    │
+│     _ __ ___ / __/ / /_/ (__  ) /_/ /  / / /___/ ____/  /  __/_/ /_/ /     │
+│    _ __ ___ /_/    \____/____/\__/_/  /_/\____/_/      /_____(*)____/      │
+│                                                                            │
+│                                                                            │
+│                                FastMCP  2.0                                │
+│                                                                            │
+│                                                                            │
+│                 🖥️  Server name:     paper_search_server                    │
+│                 📦 Transport:       STDIO                                  │
+│                                                                            │
+│                 🏎️  FastMCP version: 2.12.5                                 │
+│                 🤝 MCP SDK version: 1.12.4                                 │
+│                                                                            │
+│                 📚 Docs:            https://gofastmcp.com                  │
+│                 🚀 Deploy:          https://fastmcp.cloud                  │
+│                                                                            │
+╰────────────────────────────────────────────────────────────────────────────╯
+
+
+[11/30/25 21:40:31] INFO     Starting MCP server 'paper_search_server' with transport 'stdio'                              server.py:1502
+2025-11-30 21:40:31,634 - mcp_modules.connector - INFO - Discovering available tools from Paper Search...
+2025-11-30 21:40:31,636 - mcp_modules.connector - INFO - Discovered 19 tools from Paper Search
+2025-11-30 21:40:31,636 - mcp_modules.server_manager_persistent - INFO - Persistent session established for Paper Search with 19 tools
+2025-11-30 21:40:31,636 - mcp_modules.server_manager_persistent - INFO - Creating persistent connection to Scientific Computing...
+/Users/chetan/projects/mcp-bench/mcp_servers/scientific_computation_mcp/src/server.py:18: PydanticDeprecatedSince20: `min_items` is deprecated and will be removed, use `min_length` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  def create_tensor(shape: Annotated[list[int], Field(min_items=1, description="Tensor shape as list of integers")],
+/Users/chetan/projects/mcp-bench/mcp_servers/scientific_computation_mcp/src/server.py:20: PydanticDeprecatedSince20: `min_items` is deprecated and will be removed, use `min_length` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  list[float], Field(min_items=1, description="Flat list of floats to fill the tensor")],
+2025-11-30 21:40:32,493 - mcp_modules.connector - INFO - Discovering available tools from Scientific Computing...
+[11/30/25 21:40:32] INFO     Processing request of type ListToolsRequest                                                    server.py:624
+2025-11-30 21:40:32,497 - mcp_modules.connector - INFO - Discovered 26 tools from Scientific Computing
+2025-11-30 21:40:32,497 - mcp_modules.server_manager_persistent - INFO - Persistent session established for Scientific Computing with 26 tools
+2025-11-30 21:40:32,497 - mcp_modules.server_manager_persistent - INFO - Creating persistent connection to Unit Converter...
+/opt/miniconda3/envs/mcpbench/lib/python3.10/runpy.py:126: RuntimeWarning: 'unit_converter_mcp.server' found in sys.modules after import of package 'unit_converter_mcp', but prior to execution of 'unit_converter_mcp.server'; this may result in unpredictable behaviour
+  warn(RuntimeWarning(msg))
+
+
+╭────────────────────────────────────────────────────────────────────────────╮
+│                                                                            │
+│        _ __ ___  _____           __  __  _____________    ____    ____     │
+│       _ __ ___ .'____/___ ______/ /_/  |/  / ____/ __ \  |___ \  / __ \    │
+│      _ __ ___ / /_  / __ `/ ___/ __/ /|_/ / /   / /_/ /  ___/ / / / / /    │
+│     _ __ ___ / __/ / /_/ (__  ) /_/ /  / / /___/ ____/  /  __/_/ /_/ /     │
+│    _ __ ___ /_/    \____/____/\__/_/  /_/\____/_/      /_____(*)____/      │
+│                                                                            │
+│                                                                            │
+│                                FastMCP  2.0                                │
+│                                                                            │
+│                                                                            │
+│               🖥️  Server name:     Unit Converter MCP Server                │
+│               📦 Transport:       STDIO                                    │
+│                                                                            │
+│               🏎️  FastMCP version: 2.12.5                                   │
+│               🤝 MCP SDK version: 1.12.4                                   │
+│                                                                            │
+│               📚 Docs:            https://gofastmcp.com                    │
+│               🚀 Deploy:          https://fastmcp.cloud                    │
+│                                                                            │
+╰────────────────────────────────────────────────────────────────────────────╯
+
+
+[11/30/25 21:40:32] INFO     Starting MCP server 'Unit Converter MCP Server' with transport 'stdio'                        server.py:1502
+2025-11-30 21:40:32,877 - mcp_modules.connector - INFO - Discovering available tools from Unit Converter...
+2025-11-30 21:40:32,881 - mcp_modules.connector - INFO - Discovered 16 tools from Unit Converter
+2025-11-30 21:40:32,881 - mcp_modules.server_manager_persistent - INFO - Persistent session established for Unit Converter with 16 tools
+2025-11-30 21:40:32,881 - mcp_modules.server_manager_persistent - INFO - Creating persistent connection to Wikipedia...
+  x Failed to build `pydantic-core==2.33.2`
+  |-> The build backend returned an error
+  `-> Call to `maturin.build_wheel` failed (exit status: 1)
+
+      [stdout]
+      Running `maturin pep517 build-wheel -i /Users/chetan/.cache/uv/builds-v0/.tmpbHwwai/bin/python --compatibility off`
+      cargo 1.91.1 (ea2d97820 2025-10-10)
+      Rust not found, installing into a temporary directory
+
+      [stderr]
+      Python reports SOABI: cpython-314-darwin
+      Computed rustc target triple: aarch64-apple-darwin
+      Installation directory: /Users/chetan/Library/Caches/puccinialin
+      Rustup already downloaded
+      Installing rust to /Users/chetan/Library/Caches/puccinialin/rustup
+      warn: It looks like you have an existing rustup settings file at:
+      warn: /Users/chetan/.rustup/settings.toml
+      warn: Rustup will install the default toolchain as specified in the settings file,
+      warn: instead of the one inferred from the default host triple.
+      info: profile set to 'minimal'
+      info: default host triple is aarch64-apple-darwin
+      warn: Updating existing toolchain, profile choice will be ignored
+      info: syncing channel updates for 'stable-aarch64-apple-darwin'
+      info: default toolchain set to 'stable-aarch64-apple-darwin'
+      Checking if cargo is installed
+      📦 Including license file `LICENSE`
+      🍹 Building a mixed python/rust project
+      🔗 Found pyo3 bindings
+      🐍 Found CPython 3.14 at /Users/chetan/.cache/uv/builds-v0/.tmpbHwwai/bin/python
+      📡 Using build options features, bindings from pyproject.toml
+      💻 Using `MACOSX_DEPLOYMENT_TARGET=11.0` for aarch64-apple-darwin by default
+         Compiling pyo3-build-config v0.24.1
+         Compiling pyo3-macros-backend v0.24.1
+         Compiling pyo3-ffi v0.24.1
+         Compiling pyo3 v0.24.1
+         Compiling jiter v0.9.0
+         Compiling pydantic-core v2.33.2 (/Users/chetan/.cache/uv/sdists-v9/pypi/pydantic-core/2.33.2/UAhWLKDrwQJtKUkPwiGHn/src)
+      error: failed to run custom build command for `pyo3-ffi v0.24.1`
+
+      Caused by:
+        process didn't exit successfully:
+      `/Users/chetan/.cache/uv/sdists-v9/pypi/pydantic-core/2.33.2/UAhWLKDrwQJtKUkPwiGHn/src/target/release/build/pyo3-ffi-b6b90085ae457007/build-script-build`
+      (exit status: 1)
+        --- stdout
+        cargo:rustc-check-cfg=cfg(Py_LIMITED_API)
+        cargo:rustc-check-cfg=cfg(Py_GIL_DISABLED)
+        cargo:rustc-check-cfg=cfg(PyPy)
+        cargo:rustc-check-cfg=cfg(GraalPy)
+        cargo:rustc-check-cfg=cfg(py_sys_config, values("Py_DEBUG", "Py_REF_DEBUG", "Py_TRACE_REFS", "COUNT_ALLOCS"))
+        cargo:rustc-check-cfg=cfg(pyo3_disable_reference_pool)
+        cargo:rustc-check-cfg=cfg(pyo3_leak_on_drop_without_reference_pool)
+        cargo:rustc-check-cfg=cfg(Py_3_7)
+        cargo:rustc-check-cfg=cfg(Py_3_8)
+        cargo:rustc-check-cfg=cfg(Py_3_9)
+        cargo:rustc-check-cfg=cfg(Py_3_10)
+        cargo:rustc-check-cfg=cfg(Py_3_11)
+        cargo:rustc-check-cfg=cfg(Py_3_12)
+        cargo:rustc-check-cfg=cfg(Py_3_13)
+        cargo:rustc-check-cfg=cfg(Py_3_14)
+        cargo:rerun-if-env-changed=PYO3_CROSS
+        cargo:rerun-if-env-changed=PYO3_CROSS_LIB_DIR
+        cargo:rerun-if-env-changed=PYO3_CROSS_PYTHON_VERSION
+        cargo:rerun-if-env-changed=PYO3_CROSS_PYTHON_IMPLEMENTATION
+        cargo:rerun-if-env-changed=PYO3_PRINT_CONFIG
+        cargo:rerun-if-env-changed=PYO3_USE_ABI3_FORWARD_COMPATIBILITY
+
+        --- stderr
+        error: the configured Python interpreter version (3.14) is newer than PyO3's maximum supported version (3.13)
+        = help: please check if an updated version of PyO3 is available. Current version: 0.24.1
+        = help: set PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1 to suppress this check and build anyway using the stable ABI
+      warning: build failed, waiting for other jobs to finish...
+      💥 maturin failed
+        Caused by: Failed to build a native library through cargo
+        Caused by: Cargo build finished with "exit status: 101": `env -u CARGO MACOSX_DEPLOYMENT_TARGET="11.0"
+      PYO3_BUILD_EXTENSION_MODULE="1" PYO3_ENVIRONMENT_SIGNATURE="cpython-3.14-64bit"
+      PYO3_PYTHON="/Users/chetan/.cache/uv/builds-v0/.tmpbHwwai/bin/python"
+      PYTHON_SYS_EXECUTABLE="/Users/chetan/.cache/uv/builds-v0/.tmpbHwwai/bin/python" "cargo" "rustc" "--profile"
+      "release" "--features" "pyo3/extension-module" "--message-format" "json-render-diagnostics" "--manifest-path"
+      "/Users/chetan/.cache/uv/sdists-v9/pypi/pydantic-core/2.33.2/UAhWLKDrwQJtKUkPwiGHn/src/Cargo.toml"
+      "--lib" "--crate-type" "cdylib" "--" "-C" "link-arg=-undefined" "-C" "link-arg=dynamic_lookup" "-C"
+      "link-args=-Wl,-install_name,@rpath/pydantic_core._pydantic_core.cpython-314-darwin.so"`
+      Error: command ['maturin', 'pep517', 'build-wheel', '-i', '/Users/chetan/.cache/uv/builds-v0/.tmpbHwwai/bin/python',
+      '--compatibility', 'off'] returned non-zero exit status 1
+
+      hint: This usually indicates a problem with the package or the build environment.
+  help: `pydantic-core` (v2.33.2) was included because `wikipedia-mcp` (v1.5.4) depends on `fastmcp` (v2.11.2) which depends on
+        `pydantic` (v2.11.7) which depends on `pydantic-core`
+2025-11-30 21:40:36,637 - mcp_modules.server_manager_persistent - ERROR - ERROR in connecting to STDIO server Wikipedia: Connection closed
+2025-11-30 21:40:36,637 - mcp_modules.server_manager_persistent - ERROR - Full traceback: Traceback (most recent call last):
+  File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager_persistent.py", line 160, in _connect_stdio_server_persistent
+    await session.initialize()
+  File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/session.py", line 151, in initialize
+    result = await self.send_request(
+  File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/shared/session.py", line 286, in send_request
+    raise McpError(response_or_error.error)
+mcp.shared.exceptions.McpError: Connection closed
+
+2025-11-30 21:40:36,637 - mcp_modules.server_manager_persistent - ERROR - ERROR in connecting to Wikipedia: Connection closed
+2025-11-30 21:40:36,637 - mcp_modules.server_manager_persistent - ERROR - Full traceback: Traceback (most recent call last):
+  File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager_persistent.py", line 107, in connect_all_servers
+    result = await self._connect_single_server(server_name)
+  File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager_persistent.py", line 145, in _connect_single_server
+    return await self._connect_stdio_server_persistent(server_name)
+  File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager_persistent.py", line 160, in _connect_stdio_server_persistent
+    await session.initialize()
+  File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/session.py", line 151, in initialize
+    result = await self.send_request(
+  File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/shared/session.py", line 286, in send_request
+    raise McpError(response_or_error.error)
+mcp.shared.exceptions.McpError: Connection closed
+
+2025-11-30 21:40:36,637 - mcp_modules.server_manager_persistent - INFO - Successfully connected to 10/12 servers with persistent sessions
+2025-11-30 21:40:36,637 - mcp_modules.server_manager_persistent - INFO - Total tools discovered: 110
+2025-11-30 21:40:36,637 - mcp_modules.server_manager_persistent - INFO - Filtered out 6 problematic tools
+2025-11-30 21:40:36,637 - benchmark.runner - INFO - Running full execution mode for task reddit_000
+2025-11-30 21:40:36,638 - agent.executor - INFO - Starting multi-server execution for task: "Hey, I’m putting together a quick rundown of how active conversations have been in r/MachineLearning versus r/artificial over the past week. I’d love to know which of the hottest posts in each community really took off—how many comments they started with and how much they grew when you dig into the deeper threads. If any threads jumped past around fifty comments, could you take a closer look at how the discussion branches out there?
+
+I’m also really curious about anything mentioning GPT, Transformer, or LLaMA—how those keyword-driven talks compare in volume and depth to everything else. And then, for an extra comparison, if any exact same titles showed up in both subreddits, can you pull the first handful of comments from each and highlight any difference in tone or main concerns?
+
+At the end, I need a sense of which discussions saw the biggest surge in engagement, the top three most-talked-about GPT/Transformer/LLaMA threads, and five solid recommendations on which AI topics are worth keeping an eye on next. I really need real comment counts and clear evidence behind it—no wild guesses. Thanks!"
+2025-11-30 21:40:36,639 - agent.executor - INFO - === Tool Description Token Statistics ===
+2025-11-30 21:40:36,639 - agent.executor - INFO - Total tools: 104
+2025-11-30 21:40:36,639 - agent.executor - INFO - Total tokens: 21690
+2025-11-30 21:40:36,639 - agent.executor - INFO - Description tokens: 7535
+2025-11-30 21:40:36,639 - agent.executor - INFO - Schema tokens: 12561
+2025-11-30 21:40:36,639 - agent.executor - INFO - Average tokens per tool: 208
+2025-11-30 21:40:36,639 - agent.executor - INFO - === Top 5 Tools by Token Consumption ===
+2025-11-30 21:40:36,639 - agent.executor - INFO - 1. OpenAPI Explorer:getApiOperation: 997 tokens (description: 886, schema: 95)
+2025-11-30 21:40:36,639 - agent.executor - INFO - 2. OpenAPI Explorer:getApiOverview: 960 tokens (description: 885, schema: 59)
+2025-11-30 21:40:36,639 - agent.executor - INFO - 3. Unit Converter:convert_volume: 546 tokens (description: 7, schema: 524)
+2025-11-30 21:40:36,639 - agent.executor - INFO - 4. Unit Converter:convert_density: 439 tokens (description: 7, schema: 417)
+2025-11-30 21:40:36,639 - agent.executor - INFO - 5. Unit Converter:convert_speed: 435 tokens (description: 7, schema: 413)
+2025-11-30 21:40:36,639 - agent.executor - INFO - ========================
+2025-11-30 21:40:36,639 - agent.executor - INFO - --- Starting Round 1/20 ---
+2025-11-30 21:40:36,640 - agent.executor - INFO - Planning next actions for round 1
+2025-11-30 21:40:36,642 - llm.provider - INFO - Generating completion using openai/gpt-oss-20b (attempt 1/3, max_tokens: 12000)
+2025-11-30 21:40:37,743 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-30 21:40:40,492 - agent.executor - INFO - Planning successful
+2025-11-30 21:40:40,492 - agent.executor - INFO - Planning successful - Continue=False, Planned 0 executions
+2025-11-30 21:40:40,492 - agent.executor - INFO - Decision: STOP. Reasoning: The task requires gathering real-time Reddit comment and post metrics for specific subreddits over the past week, including comment counts, growth, keyword sentiment analysis, and cross-subreddit title comparisons. None of the available tools provide access to Reddit data or APIs, and no tool in the list can fetch or analyze this information. Given the lack of a suitable tool, we cannot proceed with executing any tool calls for this round. Therefore we will not continue.
+2025-11-30 21:40:40,492 - agent.executor - INFO - Stopping execution after 0 rounds.
+2025-11-30 21:40:40,492 - agent.executor - INFO - Synthesizing final solution from all rounds...
+2025-11-30 21:40:40,492 - llm.provider - INFO - Generating completion using openai/gpt-oss-20b (attempt 1/3, max_tokens: 12000)
+2025-11-30 21:40:40,892 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-30 21:40:47,109 - agent.executor - INFO - Multi-server execution finished.
+2025-11-30 21:40:47,110 - agent.executor - INFO - Planning JSON Compliance: 0/0 = 100.00%
+2025-11-30 21:40:47,110 - benchmark.runner - INFO - Task execution completed in 10.47s
+2025-11-30 21:40:47,110 - mcp_modules.server_manager_persistent - INFO - Closing 9 persistent STDIO sessions...
+2025-11-30 21:40:49,618 - mcp_modules.server_manager_persistent - INFO - Stopping HTTP server Google Maps
+2025-11-30 21:40:49,618 - mcp_modules.connector - INFO - Stopping HTTP server for Google Maps (PID: 56780, Port: 3001)
+2025-11-30 21:40:52,619 - mcp_modules.connector - INFO - HTTP server process 56780 for Google Maps has exited
+2025-11-30 21:40:53,621 - mcp_modules.connector - INFO - Port 3001 successfully released for Google Maps
+2025-11-30 21:40:53,623 - mcp_modules.server_manager_persistent - INFO - All persistent connections closed
+2025-11-30 21:40:53,623 - benchmark.runner - INFO - Starting evaluation for task reddit_000...
+2025-11-30 21:40:53,623 - benchmark.evaluator - INFO - Starting comprehensive task evaluation...
+2025-11-30 21:40:53,623 - benchmark.evaluator - INFO - Running LLM Judge stability testing (5 randomized evaluations)
+2025-11-30 21:40:53,624 - llm.provider - INFO - Generating completion using x-ai/grok-3-mini (attempt 1/3, max_tokens: 15000)
+2025-11-30 21:40:54,391 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-30 21:41:08,286 - llm.provider - INFO - Generating completion using x-ai/grok-3-mini (attempt 1/3, max_tokens: 15000)
+2025-11-30 21:41:08,438 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-30 21:41:22,343 - llm.provider - INFO - Generating completion using x-ai/grok-3-mini (attempt 1/3, max_tokens: 15000)
+2025-11-30 21:41:22,476 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-30 21:41:37,053 - llm.provider - INFO - Generating completion using x-ai/grok-3-mini (attempt 1/3, max_tokens: 15000)
+2025-11-30 21:41:37,318 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-30 21:41:49,773 - llm.provider - INFO - Generating completion using x-ai/grok-3-mini (attempt 1/3, max_tokens: 15000)
+2025-11-30 21:41:49,931 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-30 21:42:03,121 - benchmark.evaluator - INFO - LLM Judge Pipeline Runtime:
+2025-11-30 21:42:03,121 - benchmark.evaluator - INFO -    Total judge pipeline time: 69.50s
+2025-11-30 21:42:03,122 - benchmark.evaluator - INFO -    Average per evaluation: 13.90s
+2025-11-30 21:42:03,122 - benchmark.evaluator - INFO -    Average LLM call time: 13.90s
+2025-11-30 21:42:03,122 - benchmark.evaluator - INFO -    Average parsing time: 0.000s
+2025-11-30 21:42:03,122 - benchmark.evaluator - INFO -    Completed 5/5 evaluations successfully
+2025-11-30 21:42:03,122 - benchmark.evaluator - INFO - Averaged scores from 5 stability evaluations, preserving reasoning from first evaluation
+2025-11-30 21:42:03,122 - benchmark.evaluator - INFO - Task evaluation completed successfully
+2025-11-30 21:42:03,122 - benchmark.runner - INFO - Evaluation completed in 69.50s
+2025-11-30 21:42:03,122 - benchmark.runner - INFO - Total task time: 86.48s
+2025-11-30 21:42:03,122 - benchmark.runner - INFO - 
+================================================================================
+2025-11-30 21:42:03,122 - benchmark.runner - INFO - Task reddit_000 Completed - Execution Comparison
+2025-11-30 21:42:03,122 - benchmark.runner - INFO - ================================================================================
+2025-11-30 21:42:03,122 - benchmark.runner - INFO - 
+ EXECUTION RESULTS:
+2025-11-30 21:42:03,122 - benchmark.runner - INFO - Execution Sequence: Empty
+2025-11-30 21:42:03,122 - benchmark.runner - INFO - 
+ FINAL SOLUTION:
+2025-11-30 21:42:03,122 - benchmark.runner - INFO - I’m happy to give you a ready‑made outline of what you need to look for and how to pull the data, but I’m currently unable to contact Reddit directly (there were no tool calls in the previous round). That means I can’t provide the *exact* comment counts for this week right now.  
+
+If you can run a query against Reddit’s API (or a data‑repo like Pushshift or Reddit Archive) with the filters I’ll describe below, you’ll get the precise numbers you’re after. Below is a step‑by‑step plan, a template for the output you’ll want, and an example of how the numbers would be reported once you have them.
+
+---
+
+## 1.  Data‑fetching plan
+
+| Subreddit | Filter | What to pull | URL / API endpoint |
+|-----------|--------|--------------|--------------------|
+| r/MachineLearning | top‑live (24 hrs) or top‑week | Titles + comment count (top‑level) + full comment tree (any depth) | `https://api.pushshift.io/reddit/search/submission/?subreddit=machinelearning&sort_type=score&sort=desc&size=100&after=...` |
+| r/artificial | same as above | | `https://api.pushshift.io/reddit/search/submission/?subreddit=artificial&sort_type=score&sort=desc&size=100&after=...` |
+| Keyword search | `gpt` OR `transformer` OR `llama` in title/body | All posts that match in the two subreddits | `.../search/submission/?q=(gpt+OR+transformer+OR+llama)&subreddit=machinelearning+artificial&sort_type=score` |
+
+**Tip:** Use the Pushshift *after* and *before* parameters to lock a one‑week window (e.g., `after=2025‑11‑26 00:00:00` to `before=2025‑12‑03 00:00:00`).
+
+Once you have the JSON feed, run a second pass to:
+
+1. Pull the comment trees (`comment_id`, `parent_id`, `body`, `score`, `ups`, `downs`, `distinguished`).
+2. Compute:
+   * Top‑level comment count (direct replies to post).
+   * Deeper thread depth (i.e., longest chain) and total comment count beyond 50.
+   * Count of keyword‑mentions inside comments (not just title).
+
+---
+
+## 2.  Analytic metrics to calculate
+
+| Metric | How we’ll compute it | Why it matters |
+|--------|----------------------|----------------|
+| **Initial comment explosiveness** | `top_comments / total_comments` | Shows how quickly a thread gathered traction. |
+| **Growth rate** | `(comment_growth_after_24h) / comment_count_at_post` | Indicates sustained interest. |
+| **Depth index** | longest reply chain (levels) | Highlights complex, branching discussions. |
+| **Keyword saturation** | count of keyword mentions in all comments | Gauges how much of the conversation is really about GPT/Transformer/LLaMA. |
+| **Cross‑subreddit title overlap** | exact string match on title, source flagged | Lets us compare tone across communities. |
+
+---
+
+## 3.  Template for your final report
+
+> ### a.  Hot Threads Overview  
+>  | Subreddit | Post Title | Initial Comments | Total Comments | Growth (24 hrs) | Depth |
+>  |-----------|------------|------------------|----------------|-----------------|-------|
+>  | r/MachineLearning | *“Can GPT‑4 solve...?”* | 84 |  1,012 | +457 | 5 |
+>  | r/artificial | *“OpenAI’s new policy…”* | 95 | 1,187 | +523 | 4  |
+
+> ### b.  Threads > 50 Comments – Deep‑Dive  
+>  *Post #1 (RMl)*  
+>  - Top‑level: 78 comments  
+>  - Deeper: 938 comments (665 new posts after 24 hrs)  
+>  - 1.8x growth in 24 hrs  
+>  
+>  *Post #2 (RA)*  
+>  - Top‑level: 102 comments  
+>  - Deeper: 1,054 comments (731 new posts after 24 hrs)  
+>  - Comment splits: 43% on GPT‑4, 27% on ethics, 30% on architecture.
+
+> ### c.  Keyword‑Driven Threads  
+> **GPT‑Top 3**  
+> 1. *“GPT‑4’s training data”* – 4,023 comments, depth 6  
+> 2. *“ChatGPT open‑source?”* – 3,785 comments, depth 5  
+> 3. *“Diet for GPT‑3”* – 2,912 comments, depth 4  
+>  
+> **Transformer‑Top 3**  
+> 1. *“Efficient transformers for edge devices”* – 3,112 comments, depth 5  
+> 2. *“Attention mechanisms – my take”* – 2,941 comments, depth 4  
+> 3. *“How transformers changed NLP”* – 2,460 comments, depth 4  
+>  
+> **LLaMA‑Top 3**  
+> 1. *“LLaMA 2: what’s new?”* – 2,300 comments, depth 4  
+> 2. *“Can LLaMA beat GPT‑4?”* – 1,987 comments, depth 5  
+> 3. *“LLaMA images: ViL cross‑modal”* – 1,512 comments, depth 3  
+
+> ### d.  Cross‑Subreddit Title Overlap  
+>  *“OpenAI Tutorial on Transformers”* (RMl & RA)  
+>  - RMl first comment: *“I’d love to see some example code.”* (technical curiosity)  
+>  - RA first comment: *“I’m skeptical about the safety implications.”* (ethical concern)  
+>  *Tonality Notice:* RMl leans toward implementation, RA leans toward policy.
+
+> ### e.  Summary of Engagement Surges  
+>  1. *“OpenAI’s new policy”* – +2,650 comments in 48 hrs (depth 6)  
+>  2. *“GPT‑4’s training data”* – +3,930 comments in 48 hrs (depth 7)  
+>  3. *“Efficient transformers for edge devices”* – +1,970 comments in 48 hrs (depth 5)
+
+> ### f.  Five Topics to Watch Next  
+>  1. *Federated NLP* – rapid growth in community discussions on data privacy.  
+>  2. *Sparse Transformers* – main focus in architecture papers and Reddit threads.  
+>  3. *Open‑source LLM fine‑tuning* – large comment volumes on LLaMA & GPT‑3.5.  
+>  4. *AI for climate modeling* – emergence of new projects and token‑budget discussions.  
+>  5. *Prompt‑engineering competitions* – many up‑votes and tutorial threads.
+
+---
+
+## 4.  How to fill in the numbers
+
+1. **Run the two subreddit search queries** (use `size=200` to catch the top posts of the week).
+2. For each returned submission, pull the *total comment count* (`num_comments`) from the submission JSON.
+3. Issue a second API call to fetch the comment tree (`/comments/<id>.json`) and parse the JSON into a flat list.
+4. Count:
+   * Direct replies (`parent_id == submission_id`)
+   * All nested replies (depth > 1)
+   * Comments containing the keywords in the body text.
+5. Apply the formulas in the *Analytic metrics* table.
+6. Export the results into a CSV or spreadsheet, then plug the figures into the template above.
+
+---
+
+## 5.  Caveats & next steps
+
+- **API rate limits**: Pushshift allows ~"fast" requests up to ~60‑90 s per minute; batch requests > 500 may require staggering.
+- **Deleted comments**: Some depth counts will exclude deleted or removed comments; the *visible* comment count is the accurate figure.
+- **Thread depth**: The longest reply chain may be a single long discussion thread; you can filter on `depth > 3` to isolate “branching” conversations.
+- **Keyword matching**: Use case‑insensitive regex to match `gpt`, `transformer`, `llama`, including plural forms.
+
+Once you run the data collection, you can swap in the actual counts in the table above and inherit the “real comment numbers” the user wants. Let me know if you hit any blockers while pulling the data; I can help tweak the queries or process the raw JSON for you.
+2025-11-30 21:42:03,123 - benchmark.runner - INFO - 
+ ACCUMULATED INFORMATION:
+2025-11-30 21:42:03,123 - benchmark.runner - INFO - No accumulated information available
+2025-11-30 21:42:03,123 - benchmark.runner - INFO - 
+ TASK METRICS:
+2025-11-30 21:42:03,123 - benchmark.results_formatter - INFO -   Task reddit_000 Individual Metrics:
+2025-11-30 21:42:03,123 - benchmark.results_formatter - INFO -     LLM Judge Scores: Task=1.000, Tool=1.000, Planning=1.000
+2025-11-30 21:42:03,123 - benchmark.results_formatter - INFO -     Tool Accuracy: Schema=N/A, ValidName=N/A, Success=N/A, JSONCompliance=100.0%
+2025-11-30 21:42:03,123 - benchmark.results_formatter - INFO -     LLM Judge Subdimension Reasoning:
+2025-11-30 21:42:03,123 - benchmark.results_formatter - INFO -       Task Fulfillment:
+2025-11-30 21:42:03,123 - benchmark.results_formatter - INFO -         The concrete task required executing seven specific steps using provided Reddit tools, including fetching hot threads in parallel, parsing outputs, fetching post content, identifying threads, detecting keywords, finding title matches, and producing a JSON report. The agent did not execute any of these steps, as no tools were called, and instead provided a high-level plan using external APIs like Pushshift, which are not part of the available tools. This means 0 out of 7 steps were completed, resulting in a 100% defect rate (0% fulfillment), mapping to a score of 1.
+2025-11-30 21:42:03,123 - benchmark.results_formatter - INFO -       Grounding:
+2025-11-30 21:42:03,123 - benchmark.results_formatter - INFO -         The agent's response includes various claims, metrics, and examples (e.g., comment counts, growth rates, and keyword analyses), but none are based on actual tool outputs, as no tools were executed. All content is hypothetical or derived from general knowledge, with 0% of claims perfectly grounded in evidence from tool results. This results in a 100% defect rate, mapping to a score of 1.
+2025-11-30 21:42:03,123 - benchmark.results_formatter - INFO -       Tool Appropriateness:
+2025-11-30 21:42:03,123 - benchmark.results_formatter - INFO -         The concrete task specified using particular Reddit tools for subtasks like fetching threads and post content, which were not among the available tools listed. The agent did not select or use any tools, making it impossible to assess appropriateness for the subtasks. Thus, 0% of required tool selections were perfectly appropriate, resulting in a 100% defect rate, mapping to a score of 1.
+2025-11-30 21:42:03,123 - benchmark.results_formatter - INFO -       Parameter Accuracy:
+2025-11-30 21:42:03,123 - benchmark.results_formatter - INFO -         No tool calls were made, so there were no parameters to evaluate for accuracy or completeness. With zero opportunities for perfect execution, the defect rate is 100% (as all potential calls failed to occur), mapping to a score of 1.
+2025-11-30 21:42:03,123 - benchmark.results_formatter - INFO -       Dependency Awareness:
+2025-11-30 21:42:03,123 - benchmark.results_formatter - INFO -         The concrete task has clear dependency chains (e.g., fetching threads before parsing or fetching content), and the agent's plan loosely outlines these but does not execute them. Since no steps were performed, 0% of dependency chains were perfectly executed, resulting in a 100% defect rate, mapping to a score of 1.
+2025-11-30 21:42:03,123 - benchmark.results_formatter - INFO -       Parallelism & Efficiency:
+2025-11-30 21:42:03,124 - benchmark.results_formatter - INFO -         The concrete task includes parallelizable elements (e.g., fetching data for two subreddits simultaneously), but the agent made no tool calls, so 0% of parallelizable tasks were executed in parallel, and there were no redundant calls to assess. This constitutes a 100% defect rate for efficiency, mapping to a score of 1.
+2025-11-30 21:42:03,124 - benchmark.runner - INFO - ================================================================================
+
+2025-11-30 21:42:03,125 - benchmark.runner - INFO - [SUCCESS] Task reddit_000 completed with status: completed
+2025-11-30 21:42:03,125 - benchmark.results_formatter - INFO - 
+================================================================================
+2025-11-30 21:42:03,125 - benchmark.results_formatter - INFO - Cumulative Metrics for gpt-oss-20b (mcpbench_tasks_single_runner_format.json) (7/8 tasks completed):
+2025-11-30 21:42:03,125 - benchmark.results_formatter - INFO - ================================================================================
+2025-11-30 21:42:03,125 - benchmark.results_formatter - INFO -   LLM Judge Scores:
+2025-11-30 21:42:03,125 - benchmark.results_formatter - INFO -     • Task Completion Score: 5.443
+2025-11-30 21:42:03,125 - benchmark.results_formatter - INFO -     • Tool Selection Score: 5.471
+2025-11-30 21:42:03,125 - benchmark.results_formatter - INFO -     • Planning Effectiveness Score: 4.671
+2025-11-30 21:42:03,125 - benchmark.results_formatter - INFO -   Subdimension Scores:
+2025-11-30 21:42:03,125 - benchmark.results_formatter - INFO -     Task: Fulfillment 5.314, Grounding 5.571
+2025-11-30 21:42:03,125 - benchmark.results_formatter - INFO -     Tool: Appropriateness 5.457, Parameter Accuracy 5.486
+2025-11-30 21:42:03,125 - benchmark.results_formatter - INFO -     Plan: Dependency 4.943, Efficiency 4.400
+2025-11-30 21:42:03,126 - benchmark.results_formatter - INFO -   Tool Accuracy Metrics:
+2025-11-30 21:42:03,126 - benchmark.results_formatter - INFO -     • Input Schema Compliance: 97.04% (among valid tool names)
+2025-11-30 21:42:03,126 - benchmark.results_formatter - INFO -     • Valid Tool Name Rate: 100.00%
+2025-11-30 21:42:03,126 - benchmark.results_formatter - INFO -     • Tool Call Success Rate: 91.27%
+2025-11-30 21:42:03,126 - benchmark.results_formatter - INFO -   Execution Statistics:
+2025-11-30 21:42:03,126 - benchmark.results_formatter - INFO -     • Avg Rounds per Task: 1.29
+2025-11-30 21:42:03,126 - benchmark.results_formatter - INFO -     • Avg Tool Calls per Task: 20.00
+2025-11-30 21:42:03,126 - benchmark.results_formatter - INFO -   Token Usage (OpenAI Tokenizer):
+2025-11-30 21:42:03,126 - benchmark.results_formatter - INFO -     • Avg Output Tokens per Task: 7328
+2025-11-30 21:42:03,126 - benchmark.results_formatter - INFO -     • Avg Prompt Tokens per Task: 81695
+2025-11-30 21:42:03,126 - benchmark.results_formatter - INFO -     • Avg Total Tokens per Task: 89023
+2025-11-30 21:42:03,126 - benchmark.results_formatter - INFO -   Runtime:
+2025-11-30 21:42:03,126 - benchmark.results_formatter - INFO -     • Avg Agent Execution Time: 72.6s
+2025-11-30 21:42:03,126 - benchmark.results_formatter - INFO -     • Avg Judge Pipeline Time: 76.7s
+2025-11-30 21:42:03,126 - benchmark.results_formatter - INFO - ================================================================================
+
+2025-11-30 21:42:04,128 - benchmark.runner - INFO - 
+[Overall Progress: 7/8 (87.5%)]
+2025-11-30 21:42:04,128 - benchmark.runner - INFO - Model gpt-oss-20b (1/1): Processing task 8/8
+2025-11-30 21:42:04,128 - benchmark.runner - INFO - Executing task reddit_001 with model gpt-oss-20b using fuzzy description (with concrete reference)
+2025-11-30 21:42:04,128 - benchmark.runner - INFO - Added resident server: Time MCP
+2025-11-30 21:42:04,129 - benchmark.runner - INFO - Using 10 predefined distraction servers from task
+2025-11-30 21:42:04,129 - benchmark.runner - INFO - Connecting to 12 servers: required=['Reddit'], resident=1, distractions=10
+2025-11-30 21:42:04,129 - benchmark.runner - INFO - Attempt 1/3 for task reddit_001
+2025-11-30 21:42:04,129 - mcp_modules.server_manager_persistent - INFO - PersistentMultiServerManager initialized with 12 server configurations
+2025-11-30 21:42:04,129 - mcp_modules.server_manager_persistent - INFO - Establishing persistent connections to 12 MCP servers (sequential mode)...
+2025-11-30 21:42:04,130 - mcp_modules.server_manager_persistent - INFO - Creating persistent connection to Reddit...
+  x Failed to build `pydantic-core==2.33.2`
+  |-> The build backend returned an error
+  `-> Call to `maturin.build_wheel` failed (exit status: 1)
+
+      [stdout]
+      Running `maturin pep517 build-wheel -i /Users/chetan/.cache/uv/builds-v0/.tmp1Hg9V0/bin/python --compatibility off`
+      cargo 1.91.1 (ea2d97820 2025-10-10)
+      Rust not found, installing into a temporary directory
+
+      [stderr]
+      Python reports SOABI: cpython-314-darwin
+      Computed rustc target triple: aarch64-apple-darwin
+      Installation directory: /Users/chetan/Library/Caches/puccinialin
+      Rustup already downloaded
+      Installing rust to /Users/chetan/Library/Caches/puccinialin/rustup
+      warn: It looks like you have an existing rustup settings file at:
+      warn: /Users/chetan/.rustup/settings.toml
+      warn: Rustup will install the default toolchain as specified in the settings file,
+      warn: instead of the one inferred from the default host triple.
+      info: profile set to 'minimal'
+      info: default host triple is aarch64-apple-darwin
+      warn: Updating existing toolchain, profile choice will be ignored
+      info: syncing channel updates for 'stable-aarch64-apple-darwin'
+      info: default toolchain set to 'stable-aarch64-apple-darwin'
+      Checking if cargo is installed
+      📦 Including license file `LICENSE`
+      🍹 Building a mixed python/rust project
+      🔗 Found pyo3 bindings
+      🐍 Found CPython 3.14 at /Users/chetan/.cache/uv/builds-v0/.tmp1Hg9V0/bin/python
+      📡 Using build options features, bindings from pyproject.toml
+      💻 Using `MACOSX_DEPLOYMENT_TARGET=11.0` for aarch64-apple-darwin by default
+         Compiling pyo3-build-config v0.24.1
+         Compiling pyo3-ffi v0.24.1
+         Compiling pyo3-macros-backend v0.24.1
+         Compiling pyo3 v0.24.1
+         Compiling jiter v0.9.0
+         Compiling pydantic-core v2.33.2 (/Users/chetan/.cache/uv/sdists-v9/pypi/pydantic-core/2.33.2/UAhWLKDrwQJtKUkPwiGHn/src)
+      error: failed to run custom build command for `pyo3-ffi v0.24.1`
+f
+      Caused by:
+        process didn't exit successfully:
+      `/Users/chetan/.cache/uv/sdists-v9/pypi/pydantic-core/2.33.2/UAhWLKDrwQJtKUkPwiGHn/src/target/release/build/pyo3-ffi-b6b90085ae457007/build-script-build`
+      (exit status: 1)
+        --- stdout
+        cargo:rustc-check-cfg=cfg(Py_LIMITED_API)
+        cargo:rustc-check-cfg=cfg(Py_GIL_DISABLED)
+        cargo:rustc-check-cfg=cfg(PyPy)
+        cargo:rustc-check-cfg=cfg(GraalPy)
+        cargo:rustc-check-cfg=cfg(py_sys_config, values("Py_DEBUG", "Py_REF_DEBUG", "Py_TRACE_REFS", "COUNT_ALLOCS"))
+        cargo:rustc-check-cfg=cfg(pyo3_disable_reference_pool)
+        cargo:rustc-check-cfg=cfg(pyo3_leak_on_drop_without_reference_pool)
+        cargo:rustc-check-cfg=cfg(Py_3_7)
+        cargo:rustc-check-cfg=cfg(Py_3_8)
+        cargo:rustc-check-cfg=cfg(Py_3_9)
+        cargo:rustc-check-cfg=cfg(Py_3_10)
+        cargo:rustc-check-cfg=cfg(Py_3_11)
+        cargo:rustc-check-cfg=cfg(Py_3_12)
+        cargo:rustc-check-cfg=cfg(Py_3_13)
+        cargo:rustc-check-cfg=cfg(Py_3_14)
+        cargo:rerun-if-env-changed=PYO3_CROSS
+        cargo:rerun-if-env-changed=PYO3_CROSS_LIB_DIR
+        cargo:rerun-if-env-changed=PYO3_CROSS_PYTHON_VERSION
+        cargo:rerun-if-env-changed=PYO3_CROSS_PYTHON_IMPLEMENTATION
+        cargo:rerun-if-env-changed=PYO3_PRINT_CONFIG
+        cargo:rerun-if-env-changed=PYO3_USE_ABI3_FORWARD_COMPATIBILITY
+
+        --- stderr
+        error: the configured Python interpreter version (3.14) is newer than PyO3's maximum supported version (3.13)
+        = help: please check if an updated version of PyO3 is available. Current version: 0.24.1
+        = help: set PYO3_USE_ABI3_FORWARD_COMPATIBILITY=1 to suppress this check and build anyway using the stable ABI
+      warning: build failed, waiting for other jobs to finish...
+      💥 maturin failed
+        Caused by: Failed to build a native library through cargo
+        Caused by: Cargo build finished with "exit status: 101": `env -u CARGO MACOSX_DEPLOYMENT_TARGET="11.0"
+      PYO3_BUILD_EXTENSION_MODULE="1" PYO3_ENVIRONMENT_SIGNATURE="cpython-3.14-64bit"
+      PYO3_PYTHON="/Users/chetan/.cache/uv/builds-v0/.tmp1Hg9V0/bin/python"
+      PYTHON_SYS_EXECUTABLE="/Users/chetan/.cache/uv/builds-v0/.tmp1Hg9V0/bin/python" "cargo" "rustc" "--profile"
+      "release" "--features" "pyo3/extension-module" "--message-format" "json-render-diagnostics" "--manifest-path"
+      "/Users/chetan/.cache/uv/sdists-v9/pypi/pydantic-core/2.33.2/UAhWLKDrwQJtKUkPwiGHn/src/Cargo.toml"
+      "--lib" "--crate-type" "cdylib" "--" "-C" "link-arg=-undefined" "-C" "link-arg=dynamic_lookup" "-C"
+      "link-args=-Wl,-install_name,@rpath/pydantic_core._pydantic_core.cpython-314-darwin.so"`
+      Error: command ['maturin', 'pep517', 'build-wheel', '-i', '/Users/chetan/.cache/uv/builds-v0/.tmp1Hg9V0/bin/python',
+      '--compatibility', 'off'] returned non-zero exit status 1
+
+      hint: This usually indicates a problem with the package or the build environment.
+  help: `pydantic-core` (v2.33.2) was included because `mcp-reddit-server` (v0.1.0) depends on `fastmcp` (v2.10.6) which depends on
+        `pydantic` (v2.11.7) which depends on `pydantic-core`
+2025-11-30 21:42:08,856 - mcp_modules.server_manager_persistent - ERROR - ERROR in connecting to STDIO server Reddit: Connection closed
+2025-11-30 21:42:08,857 - mcp_modules.server_manager_persistent - ERROR - Full traceback: Traceback (most recent call last):
+  File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager_persistent.py", line 160, in _connect_stdio_server_persistent
+    await session.initialize()
+  File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/session.py", line 151, in initialize
+    result = await self.send_request(
+  File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/shared/session.py", line 286, in send_request
+    raise McpError(response_or_error.error)
+mcp.shared.exceptions.McpError: Connection closed
+
+2025-11-30 21:42:08,857 - mcp_modules.server_manager_persistent - ERROR - ERROR in connecting to Reddit: Connection closed
+2025-11-30 21:42:08,857 - mcp_modules.server_manager_persistent - ERROR - Full traceback: Traceback (most recent call last):
+  File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager_persistent.py", line 107, in connect_all_servers
+    result = await self._connect_single_server(server_name)
+  File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager_persistent.py", line 145, in _connect_single_server
+    return await self._connect_stdio_server_persistent(server_name)
+  File "/Users/chetan/projects/mcp-bench/mcp_modules/server_manager_persistent.py", line 160, in _connect_stdio_server_persistent
+    await session.initialize()
+  File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/client/session.py", line 151, in initialize
+    result = await self.send_request(
+  File "/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/mcp/shared/session.py", line 286, in send_request
+    raise McpError(response_or_error.error)
+mcp.shared.exceptions.McpError: Connection closed
+
+2025-11-30 21:42:08,857 - mcp_modules.server_manager_persistent - INFO - Creating persistent connection to Time MCP...
+2025-11-30 21:42:09,262 - mcp_modules.connector - INFO - Discovering available tools from Time MCP...
+2025-11-30 21:42:09,263 - mcp_modules.connector - INFO - Discovered 2 tools from Time MCP
+2025-11-30 21:42:09,263 - mcp_modules.server_manager_persistent - INFO - Persistent session established for Time MCP with 2 tools
+2025-11-30 21:42:09,263 - mcp_modules.server_manager_persistent - INFO - Creating persistent connection to Call for Papers...
+2025-11-30 21:42:09,613 - mcp_modules.connector - INFO - Discovering available tools from Call for Papers...
+[11/30/25 21:42:09] INFO     Processing request of type ListToolsRequest                                                    server.py:624
+2025-11-30 21:42:09,617 - mcp_modules.connector - INFO - Discovered 1 tools from Call for Papers
+2025-11-30 21:42:09,617 - mcp_modules.server_manager_persistent - INFO - Persistent session established for Call for Papers with 1 tools
+2025-11-30 21:42:09,617 - mcp_modules.server_manager_persistent - INFO - Creating persistent connection to Context7...
+Context7 Documentation MCP Server running on stdio
+2025-11-30 21:42:09,701 - mcp_modules.connector - INFO - Discovering available tools from Context7...
+2025-11-30 21:42:09,703 - mcp_modules.connector - INFO - Discovered 2 tools from Context7
+2025-11-30 21:42:09,703 - mcp_modules.server_manager_persistent - INFO - Persistent session established for Context7 with 2 tools
+2025-11-30 21:42:09,703 - mcp_modules.server_manager_persistent - INFO - Creating persistent connection to Huge Icons...
+hugeicons MCP server running on stdio
+2025-11-30 21:42:09,806 - mcp_modules.connector - INFO - Discovering available tools from Huge Icons...
+2025-11-30 21:42:09,807 - mcp_modules.connector - INFO - Discovered 3 tools from Huge Icons
+2025-11-30 21:42:09,807 - mcp_modules.server_manager_persistent - INFO - Persistent session established for Huge Icons with 3 tools
+2025-11-30 21:42:09,807 - mcp_modules.server_manager_persistent - INFO - Creating persistent connection to Hugging Face...
+2025-11-30 21:42:10,151 - mcp_modules.connector - INFO - Discovering available tools from Hugging Face...
+2025-11-30 21:42:10,152 - mcp_modules.connector - INFO - Discovered 10 tools from Hugging Face
+2025-11-30 21:42:10,152 - mcp_modules.server_manager_persistent - INFO - Persistent session established for Hugging Face with 10 tools
+2025-11-30 21:42:10,153 - mcp_modules.server_manager_persistent - INFO - Creating persistent connection to Math MCP...
+2025-11-30 21:42:10,207 - mcp_modules.connector - INFO - Discovering available tools from Math MCP...
+2025-11-30 21:42:10,209 - mcp_modules.connector - INFO - Discovered 13 tools from Math MCP
+2025-11-30 21:42:10,209 - mcp_modules.server_manager_persistent - INFO - Persistent session established for Math MCP with 13 tools
+2025-11-30 21:42:10,209 - mcp_modules.server_manager_persistent - INFO - Creating persistent connection to Metropolitan Museum...
+Met Museum MCP server running on stdio
+2025-11-30 21:42:10,317 - mcp_modules.connector - INFO - Discovering available tools from Metropolitan Museum...
+2025-11-30 21:42:10,319 - mcp_modules.connector - INFO - Discovered 3 tools from Metropolitan Museum
+2025-11-30 21:42:10,319 - mcp_modules.server_manager_persistent - INFO - Persistent session established for Metropolitan Museum with 3 tools
+2025-11-30 21:42:10,319 - mcp_modules.server_manager_persistent - INFO - Creating persistent connection to NixOS...
+2025-11-30 21:42:10,663 - mcp_modules.connector - INFO - Discovering available tools from NixOS...
+[11/30/25 21:42:10] INFO     Processing request of type ListToolsRequest                                                    server.py:624
+2025-11-30 21:42:10,667 - mcp_modules.connector - INFO - Discovered 18 tools from NixOS
+2025-11-30 21:42:10,667 - mcp_modules.server_manager_persistent - INFO - Persistent session established for NixOS with 18 tools
+2025-11-30 21:42:10,667 - mcp_modules.server_manager_persistent - INFO - Creating persistent connection to OpenAPI Explorer...
+2025-11-30 21:42:10,766 - mcp_modules.connector - INFO - Discovering available tools from OpenAPI Explorer...
+2025-11-30 21:42:11,044 - mcp_modules.connector - INFO - Discovered 2 tools from OpenAPI Explorer
+2025-11-30 21:42:11,044 - mcp_modules.server_manager_persistent - INFO - Persistent session established for OpenAPI Explorer with 2 tools
+2025-11-30 21:42:11,044 - mcp_modules.server_manager_persistent - INFO - Creating persistent connection to Paper Search...
+/opt/miniconda3/envs/mcpbench/lib/python3.10/site-packages/PyPDF2/__init__.py:21: DeprecationWarning: PyPDF2 is deprecated. Please move to the pypdf library instead.
+  warnings.warn(
+
+
+╭────────────────────────────────────────────────────────────────────────────╮
+│                                                                            │
+│        _ __ ___  _____           __  __  _____________    ____    ____     │
+│       _ __ ___ .'____/___ ______/ /_/  |/  / ____/ __ \  |___ \  / __ \    │
+│      _ __ ___ / /_  / __ `/ ___/ __/ /|_/ / /   / /_/ /  ___/ / / / / /    │
+│     _ __ ___ / __/ / /_/ (__  ) /_/ /  / / /___/ ____/  /  __/_/ /_/ /     │
+│    _ __ ___ /_/    \____/____/\__/_/  /_/\____/_/      /_____(*)____/      │
+│                                                                            │
+│                                                                            │
+│                                FastMCP  2.0                                │
+│                                                                            │
+│                                                                            │
+│                 🖥️  Server name:     paper_search_server                    │
+│                 📦 Transport:       STDIO                                  │
+│                                                                            │
+│                 🏎️  FastMCP version: 2.12.5                                 │
+│                 🤝 MCP SDK version: 1.12.4                                 │
+│                                                                            │
+│                 📚 Docs:            https://gofastmcp.com                  │
+│                 🚀 Deploy:          https://fastmcp.cloud                  │
+│                                                                            │
+╰────────────────────────────────────────────────────────────────────────────╯
+
+
+[11/30/25 21:42:11] INFO     Starting MCP server 'paper_search_server' with transport 'stdio'                              server.py:1502
+2025-11-30 21:42:11,601 - mcp_modules.connector - INFO - Discovering available tools from Paper Search...
+2025-11-30 21:42:11,604 - mcp_modules.connector - INFO - Discovered 19 tools from Paper Search
+2025-11-30 21:42:11,604 - mcp_modules.server_manager_persistent - INFO - Persistent session established for Paper Search with 19 tools
+2025-11-30 21:42:11,604 - mcp_modules.server_manager_persistent - INFO - Creating persistent connection to Weather Data...
+2025-11-30 21:42:11,914 - mcp_modules.connector - INFO - Discovering available tools from Weather Data...
+[11/30/25 21:42:11] INFO     Processing request of type ListToolsRequest                                                    server.py:624
+2025-11-30 21:42:11,917 - mcp_modules.connector - INFO - Discovered 4 tools from Weather Data
+2025-11-30 21:42:11,917 - mcp_modules.server_manager_persistent - INFO - Persistent session established for Weather Data with 4 tools
+2025-11-30 21:42:11,917 - mcp_modules.server_manager_persistent - INFO - Successfully connected to 11/12 servers with persistent sessions
+2025-11-30 21:42:11,917 - mcp_modules.server_manager_persistent - INFO - Total tools discovered: 77
+2025-11-30 21:42:11,917 - mcp_modules.server_manager_persistent - INFO - Filtered out 6 problematic tools
+2025-11-30 21:42:11,917 - benchmark.runner - INFO - Running full execution mode for task reddit_001
+2025-11-30 21:42:11,917 - agent.executor - INFO - Starting multi-server execution for task: "Hey, I’m putting together a quick highlight for our ML community newsletter and I want to focus on two posts: the one that’s getting the most chatter right now and the next biggest by upvotes. Could you:
+
+• Grab the current top 5 hot threads from r/MachineLearning  
+• Figure out which one has the highest comment count and call that our “main” thread  
+• Skim its first 15 top-level comments (down to three replies deep) and check how many of those 15 actually sparked at least one reply—if more than 10 did, dig two more levels deep instead  
+• At the same time, pull the runner-up by score from the remaining four, read its first 10 comments up to two levels deep  
+• Finally, give me a JSON array of two objects (main and runner-up) where each object has:  
+  – id (post ID)  
+  – title  
+  – score  
+  – comment_count  
+  – fetched_depth (the depth you ended up using)  
+  – top_comment_snippet (the text of its single most upvoted top-level comment)  
+  – deeper_refetch_performed (true only if you had to go deeper on the main thread)
+
+I really need the real numbers and snippets so I can drop this straight into our newsletter—no guesses, just hard data. Thanks!
+
+Please ensure all findings are supported by concrete data and verifiable sources. I need specific numbers and evidence, not generalizations."
+2025-11-30 21:42:11,919 - agent.executor - INFO - === Tool Description Token Statistics ===
+2025-11-30 21:42:11,919 - agent.executor - INFO - Total tools: 71
+2025-11-30 21:42:11,919 - agent.executor - INFO - Total tokens: 11072
+2025-11-30 21:42:11,919 - agent.executor - INFO - Description tokens: 4913
+2025-11-30 21:42:11,919 - agent.executor - INFO - Schema tokens: 5232
+2025-11-30 21:42:11,919 - agent.executor - INFO - Average tokens per tool: 155
+2025-11-30 21:42:11,919 - agent.executor - INFO - === Top 5 Tools by Token Consumption ===
+2025-11-30 21:42:11,919 - agent.executor - INFO - 1. OpenAPI Explorer:getApiOperation: 997 tokens (description: 886, schema: 95)
+2025-11-30 21:42:11,919 - agent.executor - INFO - 2. OpenAPI Explorer:getApiOverview: 960 tokens (description: 885, schema: 59)
+2025-11-30 21:42:11,919 - agent.executor - INFO - 3. Metropolitan Museum:search-museum-objects: 407 tokens (description: 97, schema: 291)
+2025-11-30 21:42:11,919 - agent.executor - INFO - 4. Context7:resolve-library-id: 376 tokens (description: 283, schema: 80)
+2025-11-30 21:42:11,919 - agent.executor - INFO - 5. Context7:get-library-docs: 301 tokens (description: 71, schema: 217)
+2025-11-30 21:42:11,919 - agent.executor - INFO - ========================
+2025-11-30 21:42:11,919 - agent.executor - INFO - --- Starting Round 1/20 ---
+2025-11-30 21:42:11,919 - agent.executor - INFO - Planning next actions for round 1
+2025-11-30 21:42:11,920 - llm.provider - INFO - Generating completion using openai/gpt-oss-20b (attempt 1/3, max_tokens: 12000)
+2025-11-30 21:42:14,988 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-30 21:42:16,410 - agent.executor - INFO - Planning successful
+2025-11-30 21:42:16,410 - agent.executor - INFO - Planning successful - Continue=False, Planned 0 executions
+2025-11-30 21:42:16,410 - agent.executor - INFO - Decision: STOP. Reasoning: The task requires accessing Reddit's r/MachineLearning for real-time data (hot threads, comment counts, etc.). None of the available tools provide Reddit API access or web scraping capabilities. Without the ability to fetch or parse Reddit content, the task cannot be completed. Therefore we cannot proceed and will not schedule any tool calls.
+2025-11-30 21:42:16,410 - agent.executor - INFO - Stopping execution after 0 rounds.
+2025-11-30 21:42:16,410 - agent.executor - INFO - Synthesizing final solution from all rounds...
+2025-11-30 21:42:16,410 - llm.provider - INFO - Generating completion using openai/gpt-oss-20b (attempt 1/3, max_tokens: 12000)
+2025-11-30 21:42:17,060 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2025-11-30 21:42:17,644 - agent.executor - INFO - Multi-server execution finished.
+2025-11-30 21:42:17,644 - agent.executor - INFO - Planning JSON Compliance: 0/0 = 100.00%
+2025-11-30 21:42:17,644 - benchmark.runner - INFO - Task execution completed in 5.73s
+2025-11-30 21:42:17,644 - mcp_modules.server_manager_persistent - INFO - Closing 11 persistent STDIO sessions...
+2025-11-30 21:42:18,023 - mcp_modules.server_manager_persistent - INFO - All persistent connections closed
+2025-11-30 21:42:18,023 - benchmark.runner - INFO - Starting evaluation for task reddit_001...
+2025-11-30 21:42:18,023 - benchmark.evaluator - INFO - Starting comprehensive task evaluation...
+2025-11-30 21:42:18,023 - benchmark.evaluator - INFO - Running LLM Judge stability testing (5 randomized evaluations)
+2025-11-30 21:42:18,024 - llm.provider - INFO - Generating completion using x-ai/grok-3-mini (attempt 1/3, max_tokens: 15000)
+2025-11-30 21:42:18,266 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 402 Payment Required"
+2025-11-30 21:42:18,270 - llm.provider - WARNING - Attempt 1/3 failed for x-ai/grok-3-mini: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 15000 tokens, but can only afford 1666. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36DuXKImQeoDb1Fd4w7Pa9DffCS'}
+2025-11-30 21:42:18,270 - llm.provider - INFO - Waiting 1 seconds before retry...
+2025-11-30 21:42:19,271 - llm.provider - INFO - Generating completion using x-ai/grok-3-mini (attempt 2/3, max_tokens: 15000)
+2025-11-30 21:42:19,332 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 402 Payment Required"
+2025-11-30 21:42:19,333 - llm.provider - WARNING - Attempt 2/3 failed for x-ai/grok-3-mini: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 15000 tokens, but can only afford 1666. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36DuXKImQeoDb1Fd4w7Pa9DffCS'}
+2025-11-30 21:42:19,333 - llm.provider - INFO - Waiting 2 seconds before retry...
+2025-11-30 21:42:21,334 - llm.provider - INFO - Generating completion using x-ai/grok-3-mini (attempt 3/3, max_tokens: 15000)
+2025-11-30 21:42:21,441 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 402 Payment Required"
+2025-11-30 21:42:21,443 - llm.provider - WARNING - Attempt 3/3 failed for x-ai/grok-3-mini: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 15000 tokens, but can only afford 1666. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36DuXKImQeoDb1Fd4w7Pa9DffCS'}
+2025-11-30 21:42:21,443 - benchmark.evaluator - WARNING - Stability evaluation 1/5 failed: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 15000 tokens, but can only afford 1666. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36DuXKImQeoDb1Fd4w7Pa9DffCS'}
+2025-11-30 21:42:21,452 - llm.provider - INFO - Generating completion using x-ai/grok-3-mini (attempt 1/3, max_tokens: 15000)
+2025-11-30 21:42:21,644 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 402 Payment Required"
+2025-11-30 21:42:21,645 - llm.provider - WARNING - Attempt 1/3 failed for x-ai/grok-3-mini: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 15000 tokens, but can only afford 1666. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36DuXKImQeoDb1Fd4w7Pa9DffCS'}
+2025-11-30 21:42:21,645 - llm.provider - INFO - Waiting 1 seconds before retry...
+2025-11-30 21:42:22,646 - llm.provider - INFO - Generating completion using x-ai/grok-3-mini (attempt 2/3, max_tokens: 15000)
+2025-11-30 21:42:22,755 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 402 Payment Required"
+2025-11-30 21:42:22,756 - llm.provider - WARNING - Attempt 2/3 failed for x-ai/grok-3-mini: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 15000 tokens, but can only afford 1666. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36DuXKImQeoDb1Fd4w7Pa9DffCS'}
+2025-11-30 21:42:22,756 - llm.provider - INFO - Waiting 2 seconds before retry...
+2025-11-30 21:42:24,757 - llm.provider - INFO - Generating completion using x-ai/grok-3-mini (attempt 3/3, max_tokens: 15000)
+2025-11-30 21:42:24,888 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 402 Payment Required"
+2025-11-30 21:42:24,889 - llm.provider - WARNING - Attempt 3/3 failed for x-ai/grok-3-mini: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 15000 tokens, but can only afford 1666. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36DuXKImQeoDb1Fd4w7Pa9DffCS'}
+2025-11-30 21:42:24,889 - benchmark.evaluator - WARNING - Stability evaluation 2/5 failed: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 15000 tokens, but can only afford 1666. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36DuXKImQeoDb1Fd4w7Pa9DffCS'}
+2025-11-30 21:42:24,890 - llm.provider - INFO - Generating completion using x-ai/grok-3-mini (attempt 1/3, max_tokens: 15000)
+2025-11-30 21:42:24,956 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 402 Payment Required"
+2025-11-30 21:42:24,958 - llm.provider - WARNING - Attempt 1/3 failed for x-ai/grok-3-mini: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 15000 tokens, but can only afford 1666. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36DuXKImQeoDb1Fd4w7Pa9DffCS'}
+2025-11-30 21:42:24,958 - llm.provider - INFO - Waiting 1 seconds before retry...
+2025-11-30 21:42:25,959 - llm.provider - INFO - Generating completion using x-ai/grok-3-mini (attempt 2/3, max_tokens: 15000)
+2025-11-30 21:42:26,091 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 402 Payment Required"
+2025-11-30 21:42:26,092 - llm.provider - WARNING - Attempt 2/3 failed for x-ai/grok-3-mini: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 15000 tokens, but can only afford 1666. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36DuXKImQeoDb1Fd4w7Pa9DffCS'}
+2025-11-30 21:42:26,092 - llm.provider - INFO - Waiting 2 seconds before retry...
+2025-11-30 21:42:28,094 - llm.provider - INFO - Generating completion using x-ai/grok-3-mini (attempt 3/3, max_tokens: 15000)
+2025-11-30 21:42:28,260 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 402 Payment Required"
+2025-11-30 21:42:28,262 - llm.provider - WARNING - Attempt 3/3 failed for x-ai/grok-3-mini: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 15000 tokens, but can only afford 1666. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36DuXKImQeoDb1Fd4w7Pa9DffCS'}
+2025-11-30 21:42:28,262 - benchmark.evaluator - WARNING - Stability evaluation 3/5 failed: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 15000 tokens, but can only afford 1666. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36DuXKImQeoDb1Fd4w7Pa9DffCS'}
+2025-11-30 21:42:28,264 - llm.provider - INFO - Generating completion using x-ai/grok-3-mini (attempt 1/3, max_tokens: 15000)
+2025-11-30 21:42:28,346 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 402 Payment Required"
+2025-11-30 21:42:28,348 - llm.provider - WARNING - Attempt 1/3 failed for x-ai/grok-3-mini: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 15000 tokens, but can only afford 1666. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36DuXKImQeoDb1Fd4w7Pa9DffCS'}
+2025-11-30 21:42:28,348 - llm.provider - INFO - Waiting 1 seconds before retry...
+2025-11-30 21:42:29,349 - llm.provider - INFO - Generating completion using x-ai/grok-3-mini (attempt 2/3, max_tokens: 15000)
+2025-11-30 21:42:29,438 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 402 Payment Required"
+2025-11-30 21:42:29,442 - llm.provider - WARNING - Attempt 2/3 failed for x-ai/grok-3-mini: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 15000 tokens, but can only afford 1666. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36DuXKImQeoDb1Fd4w7Pa9DffCS'}
+2025-11-30 21:42:29,442 - llm.provider - INFO - Waiting 2 seconds before retry...
+2025-11-30 21:42:31,443 - llm.provider - INFO - Generating completion using x-ai/grok-3-mini (attempt 3/3, max_tokens: 15000)
+2025-11-30 21:42:31,579 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 402 Payment Required"
+2025-11-30 21:42:31,580 - llm.provider - WARNING - Attempt 3/3 failed for x-ai/grok-3-mini: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 15000 tokens, but can only afford 1666. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36DuXKImQeoDb1Fd4w7Pa9DffCS'}
+2025-11-30 21:42:31,580 - benchmark.evaluator - WARNING - Stability evaluation 4/5 failed: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 15000 tokens, but can only afford 1666. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36DuXKImQeoDb1Fd4w7Pa9DffCS'}
+2025-11-30 21:42:31,580 - llm.provider - INFO - Generating completion using x-ai/grok-3-mini (attempt 1/3, max_tokens: 15000)
+2025-11-30 21:42:31,653 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 402 Payment Required"
+2025-11-30 21:42:31,654 - llm.provider - WARNING - Attempt 1/3 failed for x-ai/grok-3-mini: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 15000 tokens, but can only afford 1666. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36DuXKImQeoDb1Fd4w7Pa9DffCS'}
+2025-11-30 21:42:31,654 - llm.provider - INFO - Waiting 1 seconds before retry...
+2025-11-30 21:42:32,656 - llm.provider - INFO - Generating completion using x-ai/grok-3-mini (attempt 2/3, max_tokens: 15000)
+2025-11-30 21:42:32,777 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 402 Payment Required"
+2025-11-30 21:42:32,779 - llm.provider - WARNING - Attempt 2/3 failed for x-ai/grok-3-mini: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 15000 tokens, but can only afford 1666. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36DuXKImQeoDb1Fd4w7Pa9DffCS'}
+2025-11-30 21:42:32,779 - llm.provider - INFO - Waiting 2 seconds before retry...
+2025-11-30 21:42:34,781 - llm.provider - INFO - Generating completion using x-ai/grok-3-mini (attempt 3/3, max_tokens: 15000)
+2025-11-30 21:42:34,845 - httpx - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 402 Payment Required"
+2025-11-30 21:42:34,849 - llm.provider - WARNING - Attempt 3/3 failed for x-ai/grok-3-mini: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 15000 tokens, but can only afford 1666. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36DuXKImQeoDb1Fd4w7Pa9DffCS'}
+2025-11-30 21:42:34,850 - benchmark.evaluator - WARNING - Stability evaluation 5/5 failed: Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 15000 tokens, but can only afford 1666. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'provider_name': None}}, 'user_id': 'user_36DuXKImQeoDb1Fd4w7Pa9DffCS'}
+2025-11-30 21:42:34,850 - benchmark.evaluator - ERROR - Error in judge evaluation: All stability evaluations failed
+2025-11-30 21:42:34,850 - benchmark.evaluator - ERROR - Task evaluation failed: All stability evaluations failed
+2025-11-30 21:42:34,850 - benchmark.evaluator - ERROR - Full traceback: Traceback (most recent call last):
+  File "/Users/chetan/projects/mcp-bench/benchmark/evaluator.py", line 1002, in evaluate
+    llm_scores = await self.llm_judge.evaluate_task_performance(
+  File "/Users/chetan/projects/mcp-bench/benchmark/evaluator.py", line 542, in evaluate_task_performance
+    return await self._perform_evaluation(
+  File "/Users/chetan/projects/mcp-bench/benchmark/evaluator.py", line 623, in _perform_evaluation
+    raise RuntimeError("All stability evaluations failed")
+RuntimeError: All stability evaluations failed
+
+2025-11-30 21:42:34,850 - benchmark.runner - INFO - Evaluation completed in 16.83s
+2025-11-30 21:42:34,850 - benchmark.runner - INFO - Total task time: 22.93s
+2025-11-30 21:42:34,850 - benchmark.runner - INFO - 
+================================================================================
+2025-11-30 21:42:34,850 - benchmark.runner - INFO - Task reddit_001 Completed - Execution Comparison
+2025-11-30 21:42:34,850 - benchmark.runner - INFO - ================================================================================
+2025-11-30 21:42:34,851 - benchmark.runner - INFO - 
+ EXECUTION RESULTS:
+2025-11-30 21:42:34,851 - benchmark.runner - INFO - Execution Sequence: Empty
+2025-11-30 21:42:34,851 - benchmark.runner - INFO - 
+ FINAL SOLUTION:
+2025-11-30 21:42:34,851 - benchmark.runner - INFO - I’m sorry, but I have not been able to gather real‑time data from Reddit or any other external source during this session. As a result, I cannot provide the specific post IDs, scores, comment counts, or comment snippets you’re requesting for the current top threads on r/MachineLearning.
+
+If you would like, I can show you how to locate that information yourself or help you write a script that pulls the data via Reddit’s API. Let me know how you’d like to proceed.
+2025-11-30 21:42:34,851 - benchmark.runner - INFO - 
+ ACCUMULATED INFORMATION:
+2025-11-30 21:42:34,851 - benchmark.runner - INFO - No accumulated information available
+2025-11-30 21:42:34,851 - benchmark.runner - INFO - ================================================================================
+
+2025-11-30 21:42:34,851 - benchmark.runner - INFO - [SUCCESS] Task reddit_001 completed with status: completed
+2025-11-30 21:42:34,851 - benchmark.results_aggregator - WARNING - Skipping result without evaluation for task reddit_001
+2025-11-30 21:42:34,851 - benchmark.results_formatter - INFO - 
+================================================================================
+2025-11-30 21:42:34,851 - benchmark.results_formatter - INFO - Cumulative Metrics for gpt-oss-20b (mcpbench_tasks_single_runner_format.json) (8/8 tasks completed):
+2025-11-30 21:42:34,851 - benchmark.results_formatter - INFO - ================================================================================
+2025-11-30 21:42:34,851 - benchmark.results_formatter - INFO -   LLM Judge Scores:
+2025-11-30 21:42:34,851 - benchmark.results_formatter - INFO -     • Task Completion Score: 5.443
+2025-11-30 21:42:34,851 - benchmark.results_formatter - INFO -     • Tool Selection Score: 5.471
+2025-11-30 21:42:34,852 - benchmark.results_formatter - INFO -     • Planning Effectiveness Score: 4.671
+2025-11-30 21:42:34,852 - benchmark.results_formatter - INFO -   Subdimension Scores:
+2025-11-30 21:42:34,852 - benchmark.results_formatter - INFO -     Task: Fulfillment 5.314, Grounding 5.571
+2025-11-30 21:42:34,852 - benchmark.results_formatter - INFO -     Tool: Appropriateness 5.457, Parameter Accuracy 5.486
+2025-11-30 21:42:34,852 - benchmark.results_formatter - INFO -     Plan: Dependency 4.943, Efficiency 4.400
+2025-11-30 21:42:34,852 - benchmark.results_formatter - INFO -   Tool Accuracy Metrics:
+2025-11-30 21:42:34,852 - benchmark.results_formatter - INFO -     • Input Schema Compliance: 97.04% (among valid tool names)
+2025-11-30 21:42:34,852 - benchmark.results_formatter - INFO -     • Valid Tool Name Rate: 100.00%
+2025-11-30 21:42:34,852 - benchmark.results_formatter - INFO -     • Tool Call Success Rate: 91.27%
+2025-11-30 21:42:34,852 - benchmark.results_formatter - INFO -   Execution Statistics:
+2025-11-30 21:42:34,852 - benchmark.results_formatter - INFO -     • Avg Rounds per Task: 1.29
+2025-11-30 21:42:34,852 - benchmark.results_formatter - INFO -     • Avg Tool Calls per Task: 20.00
+2025-11-30 21:42:34,852 - benchmark.results_formatter - INFO -   Token Usage (OpenAI Tokenizer):
+2025-11-30 21:42:34,852 - benchmark.results_formatter - INFO -     • Avg Output Tokens per Task: 7328
+2025-11-30 21:42:34,852 - benchmark.results_formatter - INFO -     • Avg Prompt Tokens per Task: 81695
+2025-11-30 21:42:34,852 - benchmark.results_formatter - INFO -     • Avg Total Tokens per Task: 89023
+2025-11-30 21:42:34,852 - benchmark.results_formatter - INFO -   Runtime:
+2025-11-30 21:42:34,852 - benchmark.results_formatter - INFO -     • Avg Agent Execution Time: 72.6s
+2025-11-30 21:42:34,852 - benchmark.results_formatter - INFO -     • Avg Judge Pipeline Time: 76.7s
+2025-11-30 21:42:34,852 - benchmark.results_formatter - INFO - ================================================================================
+
+2025-11-30 21:42:35,853 - benchmark.runner - INFO - Model gpt-oss-20b completed: 8/8 tasks successful
+2025-11-30 21:42:35,854 - benchmark.runner - INFO - MCP-Bench benchmark completed: 1 models tested
+2025-11-30 21:42:35,860 - benchmark.runner - INFO - Results saved to benchmark_results_20251130_214235.json
+2025-11-30 21:42:35,860 - benchmark.runner - INFO - The overall score is calculated as the average of four main dimensions: schema understanding, task completion, tool usage, and planning effectiveness. Within each dimension (e.g., schema understanding), we first compute the mean across its sub-dimensions.
+(mcpbench) chetan@Chetans-MacBook-Air mcp-bench % 
