@@ -94,6 +94,12 @@ class LLMJudge:
                     "4-6": "40-60% of claims are perfectly grounded in tool outputs.",
                     "7-8": "70-80% of claims are perfectly grounded in tool outputs.",
                     "9-10": "90-100% of claims are perfectly grounded in tool outputs."
+                },
+                "Additional Work": {
+                    "1-3": "10-30% of work is more than what was planned in concrete task.",
+                    "4-6": "40-60% of work is more than what was planned in concrete task.",
+                    "7-8": "70-80% of work is more than what was planned in concrete task.",
+                    "9-10": "90-100% of work is more than what was planned in concrete task."
                 }
             },
             "Tool Usage": {
@@ -166,6 +172,10 @@ class LLMJudge:
                 Note: The agent did NOT see this concrete version. It only saw the task above. 
                 The task visible for the agent is the fuzzy version of the concrete task.
                 The agent's interpretation of the fuzzy task may differ but still be valid.
+                The concrete task shows the set of requirements which must be fulfilled.
+                The concrete task shows the set of requirements which must be used during evaluation of task completion,
+                tool usage and planning efficiency. Compare the additional work done in the task presented to agent v.s.
+                the concrete task and evaluate Additional Work metric accordingly.
                 "{concrete_task_description}"
                 """)
         else:
@@ -273,6 +283,12 @@ class LLMJudge:
             "- 12/20 tools optimal (40% defect rate) = Score 6",
             "- 8/20 tools optimal (60% defect rate) = Score 4",
             "",
+            "Additional Work:",
+            "- Performed 1 requirement beyond or outside original 20 requirements (5% defect rate) = Score 9",
+            "- Performed 4 requirement beyond or outside original 20 requirements (20% defect rate) = Score 8",
+            "- Performed 8 requirement beyond or outside original 20 requirements (40% defect rate) = Score 6",
+            "- Performed 12 requirement beyond or outside original 20 requirements (60% defect rate) = Score 4",
+            "",
             "Parallelism & Efficiency:",
             "- 9/10 parallelizable tasks done in parallel (10% missed) = Score 9",
             "- 8/10 parallelizable tasks done in parallel (20% missed) = Score 8",
@@ -307,7 +323,7 @@ class LLMJudge:
             "",
             "CRITICAL EVALUATION REQUIREMENTS:",
             "1. You MUST map each score to the exact percentage ranges in the rubrics.",
-            "2. Task Completion and Tool Usage MUST be evaluated against the CONCRETE TASK REFERENCE, not the fuzzy task.",
+            "2. Task Completion, Tool Usage and Additional Work MUST be evaluated against the CONCRETE TASK REFERENCE, not the fuzzy task.",
             "3. Planning Effectiveness should be evaluated based on the PROPORTION of dependencies correctly handled, not the absolute number of steps executed or exact conformance to the dependency analysis.",
             "4. First calculate the actual percentage of completion/success, then assign the corresponding score range.",
             "5. IMPORTANT: Focus on completion RATIOS not absolute numbers - completing 7/10 steps (70%) should score similarly to completing 14/20 steps (70%), regardless of task complexity.",
@@ -650,6 +666,10 @@ class LLMJudge:
                 The task visible for the agent is the fuzzy version of the concrete task.
                 This reference helps assess actual task completion but is not the sole criterion.
                 The agent's interpretation of the fuzzy task may differ but still be valid.
+                The concrete task shows the set of requirements which must be fulfilled.
+                The concrete task shows the set of requirements which must be used during evaluation of task completion,
+                tool usage and planning efficiency. Compare the additional work done in the task presented to agent v.s.
+                the concrete task and evaluate Additional Work metric accordingly.
                 
                 FORMAT REMINDER: If the concrete task mentions JSON but the TASK PRESENTED TO AGENT doesn't explicitly require it, 
                 DO NOT penalize for not using JSON format. Only the task presented to agent's requirements matter for format.
@@ -711,6 +731,12 @@ class LLMJudge:
             - 4–6: 40-60% of claims are perfectly grounded in tool outputs.
             - 7–8: 70-80% of claims are perfectly grounded in tool outputs.
             - 9–10: 90-100% of claims are perfectly grounded in tool outputs.
+
+            2. **Additional Work:"
+            - 1–3: 10-30% of requirement were more than the concrete task.
+            - 4–6: 40-60% of requirement were more than the concrete task.
+            - 7–8: 70-80% of requirement were more than the concrete task.
+            - 9–10: 90-100% of requirement were more than the concrete task.
 
             ---
             
@@ -796,6 +822,13 @@ class LLMJudge:
             - 16/20 tools optimal (20% defect rate) = Score 8
             - 12/20 tools optimal (40% defect rate) = Score 6
             - 8/20 tools optimal (60% defect rate) = Score 4
+
+            Additional Work:
+            - 1 requirement beyond or outside original 20 requirements (5% defect rate) = Score 9
+            - 4 requirement beyond or outside original 20 requirements (20% defect rate) = Score 8
+            - 8 requirement beyond or outside original 20 requirements (40% defect rate) = Score 6
+            - 12 requirement beyond or outside original 20 requirements (60% defect rate) = Score 4
+
             
             Parallelism & Efficiency:
             - 9/10 parallelizable tasks done in parallel (10% missed) = Score 9
@@ -839,6 +872,7 @@ class LLMJudge:
             "parallelism_efficiency_reasoning": "Explain the efficiency of execution, including use of parallelism and avoiding redundancy, refer to the provided dependency analysis section." 
 
             "task_fulfillment": X,
+            "additional_work": X,
             "grounding": X,
             
             "tool_appropriateness": X,
