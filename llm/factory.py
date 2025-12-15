@@ -331,6 +331,12 @@ class LLMFactory:
             provider_type="local_llm",
             model_name="Qwen/Qwen3-7B-Instruct"
         )
+
+        configs["qwen3-8b"] = ModelConfig(
+            name="qwen3-8b",
+            provider_type="local_llm",
+            model_name="Qwen/Qwen3-8B"
+        )
         
         # # Llama models
         # llama_models = [
