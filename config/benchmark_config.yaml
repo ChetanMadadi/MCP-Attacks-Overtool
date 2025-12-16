@@ -39,7 +39,7 @@ execution:
   # Information compression retry count
   compression_retries: 2
   # Maximum execution rounds
-  max_execution_rounds: 20
+  max_execution_rounds: 10
   # Server concurrency semaphore limit
   server_semaphore_limit: 20
   # Sequential-only tools that cannot be called concurrently due to the limitations from server side
