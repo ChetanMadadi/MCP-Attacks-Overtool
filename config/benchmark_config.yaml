@@ -39,7 +39,7 @@ execution:
   # Information compression retry count
   compression_retries: 2
   # Maximum execution rounds
-  max_execution_rounds: 20
+  max_execution_rounds: 10
   # Server concurrency semaphore limit
   server_semaphore_limit: 20
   # Sequential-only tools that cannot be called concurrently due to the limitations from server side
@@ -96,7 +96,7 @@ benchmark:
   
   # Feature toggles (defaults match current runner.py behavior)
   # Enable LLM judge stability testing (multiple evaluations with randomization)
-  enable_judge_stability: true
+  enable_judge_stability: false
   # Enable intelligent server preselection before planning
   enable_server_preselection: false
   # Filter out known problematic tools (rate-limited, buggy)
