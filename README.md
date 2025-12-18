@@ -72,6 +72,14 @@ We evaluated the impact of these attacks using the **Qwen3-8B** reasoning model 
 | MDP Decoy | 10 | 87.14 | 95.66 | 87.17 |
 | MDP Decoy | 20 | 88.89 | 92.42 | 86.01 |
 
+### Token Usage Graphs
+
+#### Prompt Token Usage
+![Prompt Token Usage](figures/Figure1.png)
+
+#### Output Token Usage
+![Output Token Usage](figures/figure2.png)
+
 ## Quick Start
 
 ### Installation
