@@ -8,25 +8,52 @@
 
 ## Overview
 
-Overtool is a framework designed to evaluate the security and performance implications of **OVERTHINK** (slowdown) attacks in reasoning agents using the Model Context Protocol (MCP). While most security research focuses on output correctness, Overtool explores how adversarial prompts can induce agents to expend excessive computation, invoke redundant tools, and process unnecessary context—all while potentially preserving the final output's correctness.
+Overtool is a framework designed to evaluate the security and performance implications of **slowdown attacks** in tool-augmented reasoning agents built using the Model Context Protocol (MCP). Unlike prior work that primarily focuses on output correctness or malicious tool behavior, Overtool studies how adversarial prompts can induce agents to expend excessive computation, invoke redundant tools, and process unnecessary context.
 
-These attacks can result in context window exhaustion, increased latency, and significantly higher computational costs, directly impacting the scalability of MCP-based LLM architectures.
+These slowdown attacks significantly increase execution latency and computational cost and, in stronger cases, can degrade planning quality or cause task non-completion. Our results demonstrate that in MCP-based systems, such attacks can cascade across multiple planning rounds and tool invocations, amplifying performance overhead in multi-server agent executions.
+
+## Threat Model
+
+We consider an adversary that can influence user-facing prompts provided to MCP-based reasoning agents. The adversary’s objective is to induce excessive reasoning and redundant tool usage by injecting decoy tasks that stress long-horizon planning and multi-tool execution.
+
+The attack does **not** require compromising MCP servers or modifying tool metadata. Instead, it exploits inefficiencies in agent planning and execution behavior, leading to increased latency, higher computational cost, and in stronger cases, task failure or denial of task completion.
 
 ## Attack Methodology
 
-Overtool implements a decoy prompt-based attack strategy using three primary classes of adversarial strategies:
+Overtool implements **prompt-level slowdown attacks** using structured decoy injection designed to stress multi-round planning and tool orchestration in MCP-based reasoning agents. We evaluate three primary classes of adversarial strategies:
 
-*   **Long Tool Chain Dependency**: Tasks that force the agent into long, sequential tool invocations.
-*   **Summarization Decoy**: Injected requests for redundant or excessive summarization at every step.
-*   **MDP Decoy (Recursive Reasoning)**: Long recursive reasoning tasks (e.g., Markov Decision Process problems) embedded within natural requests to trigger hidden computation.
+- **Long Tool Chain Dependency**  
+  Tasks that force the agent into long, sequential tool invocations across multiple MCP servers.
+
+- **Summarization Decoy**  
+  Injected requests for redundant or excessive summarization at intermediate steps, increasing token usage and execution time.
+
+- **MDP Decoy (Recursive Reasoning)**  
+  Long recursive reasoning tasks (e.g., Markov Decision Process problems) embedded within natural requests to trigger excessive internal computation and planning overhead.
+
+## Evaluation Pipeline
+
+Overtool evaluates agent behavior using a three-stage evaluation pipeline:
+
+- **LLM-as-a-Judge**  
+  Evaluates planning quality, tool appropriateness, and overall task fulfillment.
+
+- **Rule-Based Engine**  
+  Measures structural correctness, schema compliance, and tool invocation validity.
+
+- **Execution Statistics**  
+  Tracks wall-clock runtime, agent execution time, number of tool calls, and token usage.
+
+This pipeline enables analysis of both qualitative reasoning degradation and quantitative system-level performance impact induced by slowdown attacks.
 
 ## Performance Analysis
 
-We evaluated the impact of these attacks using the **Qwen3-8b** model across various decoy configurations.
+We evaluated the impact of these attacks using the **Qwen3-8B** reasoning model across multiple adversarial decoy configurations. Experiments were conducted using realistic multi-tool MCP tasks spanning up to 28 MCP servers.
 
-### 1. Token Consumption & Execution Runtime
+### Token Consumption & Execution Runtime
+
 | Task Type | Max Rounds | Avg Prompt Tokens | Avg Output Tokens | Avg Total Tokens | Agent Exec Time (s) |
-| :--- | :---: | :---: | :---: | :---: | :---: |
+|----------|------------|-------------------|-------------------|------------------|--------------------|
 | Long Tool Chain Dependency | 10 | 133,008.75 | 8,390.25 | 141,399.00 | 528.20 |
 | Long Tool Chain Dependency | 20 | 105,736.43 | 6,352.43 | 112,088.86 | 395.89 |
 | Summarization Decoy | 10 | 243,023.00 | 11,824.00 | 254,847.00 | 870.10 |
@@ -34,9 +61,10 @@ We evaluated the impact of these attacks using the **Qwen3-8b** model across var
 | MDP Decoy | 10 | 134,529.00 | 11,887.00 | 146,416.00 | 717.00 |
 | MDP Decoy | 20 | 101,860.00 | 9,816.00 | 111,676.00 | 595.80 |
 
-### 2. Structural Correctness (Rule-Based)
+### Structural Correctness (Rule-Based Metrics)
+
 | Task Type | Max Rounds | Schema Compliance (%) | Valid Tool Name Rate (%) | Tool Call Success Rate (%) |
-| :--- | :---: | :---: | :---: | :---: |
+|----------|------------|------------------------|--------------------------|----------------------------|
 | Long Tool Chain Dependency | 10 | 91.19 | 91.67 | 79.59 |
 | Long Tool Chain Dependency | 20 | 99.11 | 100.00 | 91.39 |
 | Summarization Decoy | 10 | 86.68 | 89.68 | 75.54 |
