@@ -75,10 +75,10 @@ We evaluated the impact of these attacks using the **Qwen3-8B** reasoning model 
 ### Token Usage Graphs
 
 #### Prompt Token Usage
-![Prompt Token Usage](figures/Figure1.png)
+![Prompt Token Usage](images/Figure1.png)
 
 #### Output Token Usage
-![Output Token Usage](figures/figure2.png)
+![Output Token Usage](images/figure2.png)
 
 ## Quick Start
 
