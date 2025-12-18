@@ -46,6 +46,36 @@ Overtool evaluates agent behavior using a three-stage evaluation pipeline:
 
 This pipeline enables analysis of both qualitative reasoning degradation and quantitative system-level performance impact induced by slowdown attacks.
 
+## Experiments and Notebooks
+
+This repository contains four Google Colab notebooks, each corresponding to a different experimental configuration used to evaluate OVERTHINK-style slowdown attacks on MCP-based reasoning agents. All experiments follow the same MCP client–server setup and evaluation pipeline, with variations introduced through decoy prompt strategies.
+
+### 📓 Notebooks
+
+- **`colab/OVERTOOL_RUNNER_LLMJudgeFix_SimpleRun.ipynb`**  
+  Baseline configuration with no decoy prompt injected. This notebook measures standard MCP performance under a fixed planning budget and serves as the reference point for all comparisons.
+
+- **`colab/OVERTOOL_RUNNER_template_mdp.ipynb`**  
+  Implements a recursive decision-making decoy task based on Markov Decision Process (MDP)-style reasoning.
+
+- **`colab/OVERTOOL_RUNNER_final_summarizer_20_rounds.ipynb`**  
+  Injects forced summarization decoy prompts that encourage redundant abstraction and compression, amplifying overthinking behavior during planning and execution.
+
+- **`colab/OVERTOOL_RUNNER_LLMJudgeFix_LongToolChain.ipynb`**  
+  Evaluates slowdown attacks via long tool-chain dependencies, requiring the agent to discover, sequence, and coordinate multiple MCP tools across extended workflows.
+
+### 📊 Results and Outputs
+
+Each notebook:
+- Logs per-task execution traces, tool calls, and planning rounds
+- Reports aggregate MCP-Bench metrics, including task completion, token usage, and execution time
+All plots and summarized results referenced in the paper are generated directly from these notebooks and can be approximately reproduced by running them in sequence.
+
+### ▶️ Reproducibility
+
+The notebooks are designed to run on **Google Colab (A100 GPU)**. Instructions for environment setup, dependency installation, and MCP server configuration are included at the top of each notebook. Users may optionally switch between cloud-based and local LLM backends depending on available compute.
+
+
 ## Performance Analysis
 
 We evaluated the impact of these attacks using the **Qwen3-8B** reasoning model across multiple adversarial decoy configurations. Experiments were conducted using realistic multi-tool MCP tasks spanning up to 28 MCP servers.
